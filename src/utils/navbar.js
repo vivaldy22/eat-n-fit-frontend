@@ -4,10 +4,14 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">
+        <nav
+          class="navbar navbar-expand-lg navbar-light "
+          style={{ background: "#422018" }}
+        >
+          <Link className="navbar-brand" to="/">
             EAT&FIT
-          </a>
+          </Link>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -26,27 +30,27 @@ class Navbar extends Component {
             <ul class="nav navbar-nav menu_nav justify-content-end">
               <li class="nav-item active">
                 <Link className="nav-link" to="/">
-                  Home
+                  Beranda
                 </Link>
               </li>
               <li class="nav-item">
                 <Link className="nav-link active" to="/about">
-                  About
+                  Tentang Kami
                 </Link>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="#">
-                  Product
+                  Produk
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="#">
-                  How to Order
+                  Cara Pesan
                 </a>
               </li>
               <li class="nav-item">
                 <Link className="nav-link active" to="/contact">
-                  Contact
+                  Kontak
                 </Link>
               </li>
             </ul>

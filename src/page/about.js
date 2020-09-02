@@ -26,14 +26,13 @@ class About extends Component {
               <div class="col-md-6 pl-md-5 pl-xl-0 offset-xl-1 col-xl-5">
                 <div class="section-intro mb-lg-4">
                   <h4 class="intro-title">About Us</h4>
-                  <h2>We speak the good food language</h2>
+                  <h2 style={{ fontFamily: "monospace" }}>Eat 'N Fit</h2>
                 </div>
                 <p>
-                  Living first us creepeth she'd earth second be sixth hath
-                  likeness greater image said sixth was without male place fowl
-                  evening an grass form living fish and rule lesser for blessed
-                  can't saw third one signs moving stars light divided was two
-                  you him appear midst cattle for they are gathering.
+                  Eat 'N Fit penyedia jasa makanan sehat dengan varian menu yang
+                  lezat dan kandungan gizi yang diukur oleh Nutrisionist terbaik
+                  berdasarkan takaran angka kecukupan gizi yang diberikan khusus
+                  untuk konsumen .
                 </p>
                 <a class="button button-shadow mt-2 mt-lg-4" href="#">
                   Learn More

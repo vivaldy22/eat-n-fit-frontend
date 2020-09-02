@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from "./utils/footer";
 function App() {
   return (
-    <div className="App">
+    <div style={{ background: "#fff3dd" }}>
       <Navbar />
       <Route exact path="/" component={Home} />
 

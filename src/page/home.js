@@ -8,7 +8,7 @@ export default class Home extends Component {
     return (
       <div>
         <div className="container">
-          <div className={Row}>
+          <div className="row mt-4">
             <ViewCarol />
             <Menu />
             <PaketMenu />
