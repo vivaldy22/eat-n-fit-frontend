@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import img from "../assets/images/bg-header.jpg";
 
 import img1 from "../img/home/sehat.jpg";
+import imgUl from "../img/home/ulangtahun1.jpg";
+import imgKantor from "../img/home/kantor.jpg";
+import imgpernikahan from "../img/home/pernikahan.jpg";
 class PaketMenu extends Component {
   render() {
     return (
@@ -9,24 +12,19 @@ class PaketMenu extends Component {
         <section class="section-margin mb-lg-100">
           <div class="container">
             <div class="section-intro mb-75px">
-              <h4 class="intro-title">Paket Menu Sehat</h4>
+              <h4 class="intro-title">Paket Acara Besar</h4>
               <h2>Paket Menu Terbaik</h2>
             </div>
 
             {/* data nanti ambil dari database */}
             <div class="owl-carousel owl-theme featured-carousel">
               <div class="featured-item">
-                <img class="card-img rounded-0" src={img1} alt="" />
+                <img class="card-img rounded-0" src={imgUl} alt="" />
                 <div class="item-body">
                   <a href="#">
-                    <h3>Sate Lilit ala Vegetarian</h3>
+                    <h3>Paket Ulang Tahun</h3>
                   </a>
-                  <p>
-                    {" "}
-                    cocok untuk menemani makan siang/malammu. Disajikan lengkap
-                    dengan Nasi Putih, Mun Tahu, dan Acar Kuning (Timun, Wortel,
-                    Putren)
-                  </p>
+                  <p> </p>
                   <div class="d-flex justify-content-between">
                     <ul class="rating-star">
                       <li>
@@ -52,14 +50,15 @@ class PaketMenu extends Component {
               <div class="featured-item">
                 <img
                   class="card-img rounded-0"
-                  src="img/home/featured2.png"
+                  src={imgKantor}
                   alt=""
+                  style={{ height: 228 }}
                 />
                 <div class="item-body">
                   <a href="#">
-                    <h3>Patatas Bravas</h3>
+                    <h3>Paket Kantoran</h3>
                   </a>
-                  <p>Whales and darkness moving</p>
+                  <p></p>
                   <div class="d-flex justify-content-between">
                     <ul class="rating-star">
                       <li>
@@ -83,49 +82,12 @@ class PaketMenu extends Component {
                 </div>
               </div>
               <div class="featured-item">
-                <img
-                  class="card-img rounded-0"
-                  src="img/home/featured3.png"
-                  alt=""
-                />
+                <img class="card-img rounded-0" src={imgpernikahan} alt="" />
                 <div class="item-body">
                   <a href="#">
-                    <h3>Pulled Sandwich</h3>
+                    <h3>Paket pernikahan </h3>
                   </a>
-                  <p>Whales and darkness moving</p>
-                  <div class="d-flex justify-content-between">
-                    <ul class="rating-star">
-                      <li>
-                        <i class="ti-star"></i>
-                      </li>
-                      <li>
-                        <i class="ti-star"></i>
-                      </li>
-                      <li>
-                        <i class="ti-star"></i>
-                      </li>
-                      <li>
-                        <i class="ti-star"></i>
-                      </li>
-                      <li>
-                        <i class="ti-star"></i>
-                      </li>
-                    </ul>
-                    <h3 class="price-tag">Rp.25.0000</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="featured-item">
-                <img
-                  class="card-img rounded-0"
-                  src="img/home/featured1.png"
-                  alt=""
-                />
-                <div class="item-body">
-                  <a href="#">
-                    <h3>Mountain Mike Pizza</h3>
-                  </a>
-                  <p>Whales and darkness moving</p>
+                  <p></p>
                   <div class="d-flex justify-content-between">
                     <ul class="rating-star">
                       <li>
@@ -149,6 +111,15 @@ class PaketMenu extends Component {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section class="cta-area text-center">
+          <div class="container">
+            <p>Untuk Menikmati layanan kami</p>
+            <h2>Download Aplikasi Eat 'N Fit sekarang juga yuk...</h2>
+            <a class="button" href="#">
+              Download Aplikasi
+            </a>
           </div>
         </section>
       </div>
