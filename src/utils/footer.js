@@ -1,14 +1,16 @@
 import React, { Component } from "react";
+import icon from "../assets/images/icons/enf.svg"
 
 class Footer extends Component {
   render() {
     return (
-      <div style={{backgroundColor:"black"}} >
+      <div  style={{ background: "black" }} >
         <section class="cta-area text-center">
-          <div class="container">
-            <p>Untuk Menikmati layanan kami</p>
-            <h2>Download Aplikasi Eat 'N Fit sekarang juga yuk...</h2>
-            <a class="button">
+          <div >
+            <p style={{color:"white" , fontFamily: "PT Serif"}}>Untuk Menikmati layanan kami</p>
+            <h2 style={{color:"white" , fontFamily: "PT Serif"}}>Download Aplikasi Eat 'N Fit sekarang juga yuk...</h2>
+            <a class="button"style={{backgroundColor:"#fcad10", fontStyle:"italic", 
+            fontFamily:"PT Serif", fontSize:"20px", color:"black"}}>
               Download Aplikasi
             </a>
           </div>
@@ -17,7 +19,8 @@ class Footer extends Component {
           <div className="row mt-5">
             <footer>
               <div class="footer-bottom  align-items-center text-center text-lg-left">
-                <p class="">Copyright &copy; 2020 EAT 'N FIT</p>
+                <p style={{color:"white" , fontFamily: "PT Serif"}}>Copyright &copy; 2020</p>
+                <p style={{color:"white" , fontFamily: "Lora", fontSize:"20px"}}> Eat & Fit </p>
               </div>
             </footer>
           </div>

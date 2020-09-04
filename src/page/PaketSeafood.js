@@ -1,28 +1,29 @@
-import React, { Component } from "react";
-import img from "../assets/images/bg-header.jpg";
+import React, { Component } from 'react';
+import imgCumi from "../img/home/cumi-masak-hitam.jpg";
+import imgTunaLadaHitam from "../img/home/Tuna-Lada-Hitam2.jpg"
+import imgDabuDabu from "../img/home/Tongkol-Dabu-Dabu.jpg"
+import imgCabeIjo from "../img/home/Tuna-Cabe-Ijo.jpg"
+import imgTongkolPindangLodeh from "../img/home/Tongkol-Pindang-Lodeh.jpg"
 
-import img1 from "../img/home/sehat.jpg";
-import imgUl from "../img/home/ulangtahun1.jpg";
-import imgKantor from "../img/home/kantor.jpg";
-import imgpernikahan from "../img/home/pernikahan.jpg";
-class PaketMenu extends Component {
-  render() {
-    return (
-      <div style={{marginTop:"-53px"}}>
-        <section class="section-margin mb-lg-100">
+
+class PaketSeafood extends Component {
+    render() {
+        return (
+      <div style={{marginTop:"-60px"}}>
+        <section class="section-margin mb-lg-100" id="paket seafood">
           <div  class="container">
             <div class="section-intro mb-75px">
-              <h4 class="intro-title" style={{fontFamily:"PT Serif", fontSize:"30px", color: "maroon"}}>Paket Sehat Kita</h4>
-              <h2 style={{fontFamily:"PT Serif", fontSize:"50px" }}>Untuk Acara Besar</h2>
+              <h4 class="intro-title" style={{fontFamily:"PT Serif", fontSize:"30px", color: "maroon"}}>Paket Seafood</h4>
+              <h2 style={{fontFamily:"PT Serif", fontSize:"50px" }}>Menu Olahan Seafood</h2>
             </div>
 
             {/* data nanti ambil dari database */}
             <div class="owl-carousel owl-theme featured-carousel">
               <div class="featured-item">
-                <img class="card-img rounded-0" src={imgUl} alt="" />
+                <img class="card-img rounded-0" src={imgCumi} alt="" />
                 <div class="item-body">
                   <a href="#">
-                    <h3>Paket Ulang Tahun</h3>
+                    <h3>Cumi Masak Hitam</h3>
                   </a>
                   <p> </p>
                   <div class="d-flex justify-content-between">
@@ -43,20 +44,44 @@ class PaketMenu extends Component {
                         <i class="ti-star"></i>
                       </li>
                     </ul>
-                    <h3 class="price-tag">Rp.25.0000</h3>
+                    <h3 class="price-tag">Rp.-</h3>
                   </div>
                 </div>
               </div>
               <div class="featured-item">
-                <img
-                  class="card-img rounded-0"
-                  src={imgKantor}
-                  alt=""
-                  style={{ height: 228 }}
-                />
+                <img class="card-img rounded-0" src={imgTunaLadaHitam} alt="" />
                 <div class="item-body">
                   <a href="#">
-                    <h3>Paket Kantoran</h3>
+                    <h3>Tuna Lada Hitam</h3>
+                  </a>
+                  <p> </p>
+                  <div class="d-flex justify-content-between">
+                    <ul class="rating-star">
+                      <li>
+                        <i class="ti-star"></i>
+                      </li>
+                      <li>
+                        <i class="ti-star"></i>
+                      </li>
+                      <li>
+                        <i class="ti-star"></i>
+                      </li>
+                      <li>
+                        <i class="ti-star"></i>
+                      </li>
+                      <li>
+                        <i class="ti-star"></i>
+                      </li>
+                    </ul>
+                    <h3 class="price-tag">Rp.-</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="featured-item">
+                <img class="card-img rounded-0" src={imgDabuDabu} alt="" />
+                <div class="item-body">
+                  <a href="#">
+                    <h3>Tongkol Dabu-Dabu</h3>
                   </a>
                   <p></p>
                   <div class="d-flex justify-content-between">
@@ -77,20 +102,15 @@ class PaketMenu extends Component {
                         <i class="ti-star"></i>
                       </li>
                     </ul>
-                    <h3 class="price-tag">Rp.25.0000</h3>
+                    <h3 class="price-tag">Rp.-</h3>
                   </div>
                 </div>
               </div>
               <div class="featured-item">
-                <img
-                  class="card-img rounded-0"
-                  src={imgKantor}
-                  alt=""
-                  style={{ height: 228 }}
-                />
+                <img class="card-img rounded-0" src={imgCabeIjo} alt="" />
                 <div class="item-body">
                   <a href="#">
-                    <h3>Paket Kantoran</h3>
+                    <h3>Tuna Cabe Ijo</h3>
                   </a>
                   <p></p>
                   <div class="d-flex justify-content-between">
@@ -111,15 +131,15 @@ class PaketMenu extends Component {
                         <i class="ti-star"></i>
                       </li>
                     </ul>
-                    <h3 class="price-tag">Rp.25.0000</h3>
+                    <h3 class="price-tag">Rp.-</h3>
                   </div>
                 </div>
               </div>
               <div class="featured-item">
-                <img class="card-img rounded-0" src={imgpernikahan} alt="" />
+                <img class="card-img rounded-0" src={imgTongkolPindangLodeh} alt="" />
                 <div class="item-body">
                   <a href="#">
-                    <h3>Paket pernikahan </h3>
+                    <h3>Tongkol Pindang Lodeh</h3>
                   </a>
                   <p></p>
                   <div class="d-flex justify-content-between">
@@ -140,16 +160,16 @@ class PaketMenu extends Component {
                         <i class="ti-star"></i>
                       </li>
                     </ul>
-                    <h3 class="price-tag">Rp.25.0000</h3>
+                    <h3 class="price-tag">Rp.-</h3>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </section>                
       </div>
-    );
-  }
+        );
+    }
 }
 
-export default PaketMenu;
+export default PaketSeafood;

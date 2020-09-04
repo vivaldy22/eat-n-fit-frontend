@@ -1,37 +1,31 @@
 import React, { Component } from "react";
 import img from "../assets/images/bg-header.jpg";
+import img1 from "../img/home/sehat.jpg";
+import imgUlangTahun from "../img/home/ulangtahun.jpg";
+import imgKantor from "../img/home/office.jpg";
+import imgAqiqah from "../img/home/aqiqah.jpg" 
+import imgWedding from "../img/home/wedding.jpg"
 
-import img1 from "../img/home/gambar1.jpg";
-import img2 from "../img/home/bola_daging.jpg";
-import img3 from "../img/home/beef.jpg";
-import img4 from "../img/home/vegetarian.jpg";
-
-class Menu extends Component {
+class PaketSehatKita extends Component {
   render() {
     return (
-      <div>
-        <section class="section-margin mb-lg-100" id="menu sehat rekomendasi">
-          <div class="container">
+      <div style={{marginTop:"-60px"}}>
+        <section class="section-margin mb-lg-100" id="paket acara besar">
+          <div  class="container">
             <div class="section-intro mb-75px">
-              <h4 class="intro-title" style={{fontFamily:"PT Serif", fontSize:"30px", color: "maroon"}}>Paket Sehat Ku </h4>
-              <h2 style={{fontFamily:"PT Serif", fontSize:"50px"}}>Menu Sehat Rekomendasi Hari Ini</h2>
+              <h4 class="intro-title" style={{fontFamily:"PT Serif", fontSize:"30px", color: "maroon"}}>Paket Sehat Kita</h4>
+              <h2 style={{fontFamily:"PT Serif", fontSize:"50px" }}>Untuk Acara Besar</h2>
             </div>
 
             {/* data nanti ambil dari database */}
             <div class="owl-carousel owl-theme featured-carousel">
               <div class="featured-item">
-                <img class="card-img rounded-0" src={img1} alt="" />
+                <img class="card-img rounded-0" src={imgUlangTahun} alt="" />
                 <div class="item-body">
                   <a href="#">
-                    <h3>(Muscle Building) Steamed Teochew Sauce</h3>
+                    <h3>Paket Ulang Tahun</h3>
                   </a>
-                  <p>
-                    {" "}
-                    Kreasi sehat dan lezat dari Eat 'N Fit dengan takaran gizi
-                    yang diukur oleh Nutritionist terbaik untuk konsumen yang
-                    fokus dalam pembentukan otot. Hidangan ini disajikan lengkap
-                    dengan Nasi Merah, Mun Tahu, Cah Sawi & Wortel.
-                  </p>
+                  <p> </p>
                   <div class="d-flex justify-content-between">
                     <ul class="rating-star">
                       <li>
@@ -50,22 +44,22 @@ class Menu extends Component {
                         <i class="ti-star"></i>
                       </li>
                     </ul>
-                    <h3 class="price-tag">Rp.250.000</h3>
+                    <h3 class="price-tag">Rp.-</h3>
                   </div>
                 </div>
               </div>
               <div class="featured-item">
-                <img class="card-img rounded-0" src={img2} alt="" />
+                <img
+                  class="card-img rounded-0"
+                  src={imgKantor}
+                  alt=""
+                  style={{ height: 228 }}
+                />
                 <div class="item-body">
                   <a href="#">
-                    <h3>(Menu Diet) Bola Bola Daging Cincang Kreasi</h3>
+                    <h3>Paket Acara Kantor</h3>
                   </a>
-                  <p>
-                    Menu Bola-Bola Daging Cincang, menggunakan daging pilihan
-                    yang minim akan lemak dan tinggi akan protein serta zat
-                    besi. Disajikan lengkap dengan Bubur Nasi Merah, Tumis Jamur
-                    Merang Cincang, dan Cah Sawi Putih Wortel Cincang
-                  </p>
+                  <p></p>
                   <div class="d-flex justify-content-between">
                     <ul class="rating-star">
                       <li>
@@ -84,25 +78,22 @@ class Menu extends Component {
                         <i class="ti-star"></i>
                       </li>
                     </ul>
-                    <h3 class="price-tag">Rp.250.000</h3>
+                    <h3 class="price-tag">Rp.-</h3>
                   </div>
                 </div>
               </div>
               <div class="featured-item">
-                <img class="card-img rounded-0" src={img3} alt="" />
+                <img
+                  class="card-img rounded-0"
+                  src={imgAqiqah}
+                  alt=""
+                  style={{ height: 228 }}
+                />
                 <div class="item-body">
                   <a href="#">
-                    <h3>(Menu untuk
-                      Penderita Jantung)
-                      Beef Bulgogi with Shirataki Noodle {" "}
-                    </h3>
+                    <h3>Paket Aqiqah</h3>
                   </a>
-                  <p>
-                    Kreasi hidangan daging pilihan yang minim akan lemak dan
-                    tinggi akan protein serta zat besi. Cocok disantap untuk
-                    makan siang/malammu. Disajikan dengan shirataki noodle
-                    japchae style, korean egg pancake, spinach namul & kimchi.
-                  </p>
+                  <p></p>
                   <div class="d-flex justify-content-between">
                     <ul class="rating-star">
                       <li>
@@ -121,22 +112,17 @@ class Menu extends Component {
                         <i class="ti-star"></i>
                       </li>
                     </ul>
-                    <h3 class="price-tag">Rp.25.0000</h3>
+                    <h3 class="price-tag">Rp.-</h3>
                   </div>
                 </div>
               </div>
               <div class="featured-item">
-                <img class="card-img rounded-0" src={img4} alt="" />
+                <img class="card-img rounded-0" src={imgWedding} alt="" />
                 <div class="item-body">
                   <a href="#">
-                    <h3>(Menu Vegetarian) Tongseng Jamur Tiram</h3>
+                    <h3>Paket pernikahan </h3>
                   </a>
-                  <p>
-                    Kelezatan tongseng jamur tiram dalam paket vegetarian yang
-                    disajikan lengkap dengan nasi merah bakar, wok fried
-                    greenpeas dan paprika, tumis putren, dan wortel. Sangat
-                    direkomendasikan bagi anda yang merupak seorang vegetarian
-                  </p>
+                  <p></p>
                   <div class="d-flex justify-content-between">
                     <ul class="rating-star">
                       <li>
@@ -155,7 +141,7 @@ class Menu extends Component {
                         <i class="ti-star"></i>
                       </li>
                     </ul>
-                    <h3 class="price-tag">Rp.25.0000</h3>
+                    <h3 class="price-tag">Rp.-</h3>
                   </div>
                 </div>
               </div>
@@ -167,4 +153,4 @@ class Menu extends Component {
   }
 }
 
-export default Menu;
+export default PaketSehatKita;

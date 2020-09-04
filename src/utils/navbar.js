@@ -7,7 +7,7 @@ class Navbar extends Component {
       <div>
         <nav
           class="navbar navbar-expand-lg navbar-light "
-          style={{ background: "#422018" }}
+          style={{ background: "black" }}
         >
           <Link className="navbar-brand" to="/" style={{color:"whitesmoke", fontFamily:"lora", fontSize:"30px", fontWeight:"bold"}}>
             EAT & FIT
@@ -40,17 +40,19 @@ class Navbar extends Component {
                 </Link>
               </li>
               <li class="nav-item">
-              <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#menu sehat rekomendasi">Menu Rekomendasi Hari Ini</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                  style={{color:"whitesmoke", fontFamily:"happy monkey", fontSize:"15px", fontWeight:"bold"}}>
+                    Produk
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#menu sehat rekomendasi">Paket Sehat Ku</a>
+                    <a class="dropdown-item" href="#paket acara besar">Paket Sehat Kita</a>
+                    <a class="dropdown-item" href="#paket seafood">Paket Menu Seafood</a>
+                    <a class="dropdown-item" href="#paket daging ayam">Paket Menu Daging Ayam</a>
+                    <div class="dropdown-divider"></div>
+                  </div>
+                </li>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="#" style={{color:"whitesmoke", fontFamily:"happy monkey", fontSize:"15px", fontWeight:"bold"}}>
@@ -59,7 +61,7 @@ class Navbar extends Component {
               </li>
               <li class="nav-item">
                 <Link className="nav-link active" to="/contact" style={{color:"whitesmoke", fontFamily:"happy monkey", fontSize:"15px", fontWeight:"bold"}}>
-                  Kontak
+                  Unduh
                 </Link>
               </li>
             </ul>

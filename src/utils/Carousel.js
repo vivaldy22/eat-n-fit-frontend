@@ -9,7 +9,7 @@ class ViewCarol extends Component {
       <div>
         <Carousel>
           <Carousel.Item>
-            <img className="d-block w-100" src={img3} alt="First slide" />
+            <img className="d-block w-100"  src={img3} alt="First slide" />
             <Carousel.Caption>
               <h1 style={{color:"white", fontSize: "70px", fontFamily:"Lora", marginBottom:"120px"}}>Jagonya Masakan Sehat Cita Rasa Indonesia</h1>
               <p style={{color:"white", fontSize: "20px"}}>Makanan Sehat Awal Pola Hidup Sehat</p>
@@ -18,16 +18,16 @@ class ViewCarol extends Component {
           <Carousel.Item>
             <img className="d-block w-100" src={img2} alt="Second slide" />
             <Carousel.Caption>
-              <h3 style={{color:"white", fontSize: "100px", fontFamily:"Lora", marginBottom:"120px"}}>Solusi Berbagai Acara Anda</h3>
+              <h3 style={{color:"white", fontSize: "70px", fontFamily:"Lora", marginBottom:"120px"}}>Solusi Berbagai Acara Anda</h3>
               <p style={{color:"white", fontSize: "20px"}}>Makanan Sehat Awal Pola Hidup Sehat</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img className="d-block w-100" src={img} alt="Third slide" />
             <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              <h3 style={{color:"white", fontSize: "70px", fontFamily:"Lora", marginBottom:"120px"}}>Download Aplikasi Eat & Fit Pada Ponsel Anda dan Nikmati Layanannya</h3>
+              <p style={{color:"white", fontSize: "20px"}}>
+              Makanan Sehat Awal Pola Hidup Sehat
               </p>
             </Carousel.Caption>
           </Carousel.Item>

@@ -12,7 +12,7 @@ function App() {
     <div style={{ background: "#fcad10" }}>
       <Navbar />
       <Route exact path="/" component={Home} />
-
+      <Route exact path="/produk" component={Home}/>
       <Route exact path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Footer />
