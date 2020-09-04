@@ -16,7 +16,7 @@ class Catagory extends Component {
                     <li class="breadcrumb-item">
                       <a href="#">Home</a>
                     </li>
-                    <li class="breadcrumb-item active">DataTables</li>
+                    <li class="breadcrumb-item active">Data Kategori</li>
                   </ol>
                 </div>
               </div>
@@ -29,9 +29,7 @@ class Catagory extends Component {
                 <div class="col-12">
                   <div class="card">
                     <div class="card-header">
-                      <h3 class="card-title">
-                        DataTable with minimal features & hover style
-                      </h3>
+                      <h3 class="card-title">Daftar Kategori</h3>
                     </div>
 
                     <div class="card-body">
@@ -41,38 +39,37 @@ class Catagory extends Component {
                       >
                         <thead>
                           <tr>
-                            <th>Rendering engine</th>
-                            <th>Browser</th>
-                            <th>Platform(s)</th>
-                            <th>Engine version</th>
-                            <th>CSS grade</th>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>Trident</td>
-                            <td>Internet Explorer 4.0</td>
-                            <td>Win 95+</td>
-                            <td> 4</td>
-                            <td>X</td>
+                            <td>1</td>
+                            <td>kantor</td>
+                            <td>
+                              <a title="Edit" style={{ marginRight: 15 }}>
+                                <i class="fas fa-edit" />
+                              </a>
+                              <a title="Hapus">
+                                <i class="fas fa-trash" />
+                              </a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>Trident</td>
+                            <td>2</td>
                             <td>Internet Explorer 5.0</td>
-                            <td>Win 95+</td>
-                            <td>5</td>
-                            <td>C</td>
+                            <td>
+                              <a title="Edit" style={{ marginRight: 15 }}>
+                                <i class="fas fa-edit" />
+                              </a>
+                              <a title="Hapus">
+                                <i class="fas fa-trash" />
+                              </a>
+                            </td>
                           </tr>
                         </tbody>
-                        <tfoot>
-                          <tr>
-                            <th>Rendering engine</th>
-                            <th>Browser</th>
-                            <th>Platform(s)</th>
-                            <th>Engine version</th>
-                            <th>CSS grade</th>
-                          </tr>
-                        </tfoot>
                       </table>
                     </div>
                   </div>

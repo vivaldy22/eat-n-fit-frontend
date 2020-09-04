@@ -12,7 +12,7 @@ class Sidebar extends Component {
               class="brand-image img-circle elevation-3"
               style={{ opacity: 0.8 }}
             />
-            <span class="brand-text font-weight-light">Eat N Fit Admin</span>
+            <span class="brand-text font-weight-light">Eat & Fit Admin</span>
           </Link>
 
           <div class="sidebar">
@@ -47,14 +47,21 @@ class Sidebar extends Component {
                 <li class="nav-item">
                   <Link className="nav-link" to="/catagory">
                     <i class="nav-icon fas fa-th"></i>
-                    <p>Data Pesanan</p>
+                    <p>Data kategori</p>
                   </Link>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/widgets.html" class="nav-link">
+                  <Link className="nav-link" to="/makanan">
                     <i class="nav-icon fas fa-th"></i>
                     <p>Data Makanan</p>
-                  </a>
+                  </Link>
+                </li>
+                <p style={{ color: "white" }}>Orderan</p>
+                <li class="nav-item">
+                  <Link className="nav-link" to="/order">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>Order</p>
+                  </Link>
                 </li>
               </ul>
             </nav>

@@ -6,16 +6,21 @@ import Dashboard from "./pages/dashboard";
 import Navbar from "./utils/navbar";
 import Sidebar from "./utils/sidebar";
 import Catagory from "./pages/catagory";
+import Food from "./pages/dataMakanan";
+import OrderFood from "./pages/order";
+import LoginPage from "./loginpage/login";
 import { Route } from "react-router-dom";
 function App() {
   return (
     <div className="wrapper">
-      {/* <Home /> */}
-      <Navbar />
+      <LoginPage />
+      {/* <Navbar />
       <Sidebar />
       <Route exact path="/" component={Dashboard} />
 
       <Route path="/catagory" component={Catagory} />
+      <Route path="/makanan" component={Food} />
+      <Route path="/order" component={OrderFood} /> */}
       {/* <Dashboard /> */}
       {/* <Catagory /> */}
     </div>
