@@ -8,7 +8,7 @@ import Sidebar from "./utils/sidebar";
 import Catagory from "./pages/catagory";
 import Food from "./pages/dataMakanan";
 import OrderFood from "./pages/order";
-import LoginPage from "./loginpage/login";
+import LoginPage from "./loginpage/loginNew";
 import { Route } from "react-router-dom";
 function App() {
   return (
