@@ -12,6 +12,16 @@ class Navbar extends Component {
               </a>
             </li>
           </ul>
+          <ul class="navbar-nav ml-auto">
+            <button
+              className="btn btn-primary"
+              onClick={() => {
+                this.props.logout();
+              }}
+            >
+              Logout
+            </button>
+          </ul>
         </nav>
       </div>
     );

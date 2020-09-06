@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 class DataMakanan extends Component {
   render() {
     return (
@@ -30,6 +30,11 @@ class DataMakanan extends Component {
                   <div class="card">
                     <div class="card-header">
                       <h3 class="card-title">Daftar Makanan</h3>
+                      <div className="d-flex flex-row-reverse">
+                        <Link className="brand-link" to="/addFood">
+                          <button className="btn btn-primary">Tambah</button>
+                        </Link>
+                      </div>
                     </div>
 
                     <div class="card-body">

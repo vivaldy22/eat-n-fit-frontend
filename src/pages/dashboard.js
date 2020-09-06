@@ -20,6 +20,59 @@ class Dashboard extends Component {
                   </ol>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-md-3 col-sm-6 col-12">
+                  <div class="info-box">
+                    <span class="info-box-icon bg-info">
+                      <i class="fas fa-clipboard-list"></i>
+                    </span>
+
+                    <div class="info-box-content">
+                      <span class="info-box-text">Menu</span>
+                      <span class="info-box-number">1,410</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-12">
+                  <div class="info-box">
+                    <span class="info-box-icon bg-success">
+                      <i class="far fa-flag"></i>
+                    </span>
+
+                    <div class="info-box-content">
+                      <span class="info-box-text">Paket</span>
+                      <span class="info-box-number">410</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-12">
+                  <div class="info-box">
+                    <span class="info-box-icon bg-warning">
+                      <i class="far fa-copy"></i>
+                    </span>
+
+                    <div class="info-box-content">
+                      <span class="info-box-text">Order</span>
+                      <span class="info-box-number">13,648</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-12">
+                  <div class="info-box">
+                    <span class="info-box-icon bg-danger">
+                      <i class="far fa-star"></i>
+                    </span>
+
+                    <div class="info-box-content">
+                      <span class="info-box-text">Likes</span>
+                      <span class="info-box-number">93,139</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

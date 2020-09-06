@@ -66,7 +66,7 @@ const LoginNew = () => {
   return (
     <div>
       {isLogin ? (
-        <AdminPage />
+        <AdminPage logOut={handelLogout} />
       ) : (
         <div class="hold-transition login-page">
           <div class="login-box">

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 class Catagory extends Component {
   render() {
     return (
@@ -11,12 +11,13 @@ class Catagory extends Component {
                 <div class="col-sm-6">
                   <h1>DataTables</h1>
                 </div>
+
                 <div class="col-sm-6">
                   <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item">
                       <a href="#">Home</a>
                     </li>
-                    <li class="breadcrumb-item active">Data Kategori</li>
+                    <li class="breadcrumb-item active">Data Paket</li>
                   </ol>
                 </div>
               </div>
@@ -29,7 +30,12 @@ class Catagory extends Component {
                 <div class="col-12">
                   <div class="card">
                     <div class="card-header">
-                      <h3 class="card-title">Daftar Kategori</h3>
+                      <h3 class="card-title">Daftar Paket</h3>
+                      <div className="d-flex flex-row-reverse">
+                        <Link className="brand-link" to="/addCategory">
+                          <button className="btn btn-primary">Tambah</button>
+                        </Link>
+                      </div>
                     </div>
 
                     <div class="card-body">
