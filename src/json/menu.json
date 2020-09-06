@@ -1,0 +1,31 @@
+{
+  "menu_name": "Nasi Ayam Geprek",
+  "food_composition": [
+    {
+      "food_name": "Nasi",
+      "food_portion": "",
+      "food_calories": "",
+      "food_fat": "",
+      "food_carbs": "",
+      "food_protein": "",
+      "food_price": "",
+      "food_desc": ""
+    },
+    {
+      "food_name": "Ayam Geprek",
+      "food_portion": "",
+      "food_calories": "",
+      "food_fat": "",
+      "food_carbs": "",
+      "food_protein": "",
+      "food_price": "",
+      "food_desc": ""
+    }
+  ],
+  "total_calories": "",
+  "total_fat": "",
+  "total_carbs": "",
+  "total_protein": "",
+  "total_price": "",
+  "desc": ""
+}

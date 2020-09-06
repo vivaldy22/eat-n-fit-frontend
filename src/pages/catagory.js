@@ -1,6 +1,25 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { getMenu } from "../config/api";
 class Catagory extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      menuList: [],
+      isLoading: false,
+    };
+  }
+  componentDidMount() {
+    this.loadData();
+  }
+  loadData = () => {
+    getMenu().then((res) => {
+      console.log("data User:", res.data);
+      this.setState({ ...this.state, menuList: res.data, isLoading: true });
+    });
+  };
+
   render() {
     return (
       <div>
@@ -11,7 +30,7 @@ class Catagory extends Component {
                 <div class="col-sm-6">
                   <h1>DataTables</h1>
                 </div>
-
+                {console.log("ini dari json" + this.state.menuList)}
                 <div class="col-sm-6">
                   <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item">
