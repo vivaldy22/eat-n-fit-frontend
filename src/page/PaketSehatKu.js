@@ -6,15 +6,21 @@ import img3 from "../img/home/beef.jpg";
 import img4 from "../img/home/pregnancy.jpg"
 import img5 from "../img/home/vegetarian.jpg";
 import ModalImage from "../utils/ModalAKG"
+import Food from "../json/food.json"
 
 class PaketSehatKu extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       show: false,
+      listMenu:[]
     };
   }
+componentDidMount(){
+  this.setState({
+    listMenu:Food.menu
+  })
+}
   handleShow = () => {
     this.setState({
       show: true,
@@ -27,6 +33,41 @@ class PaketSehatKu extends Component {
   };
 
   render() {
+
+    const paketSehat= this.state.listMenu.map((menu,index)=>(
+      <div class="featured-item">
+      <img class="card-img rounded-0" src={menu.food_picture} onClick={this.handleShow} alt="" />
+      <div class="item-body">
+        <a href="#">
+    <h3>{menu.food_name}</h3>
+        </a>
+        <p>
+          {menu.food_desc}
+         
+        </p>
+        <div class="d-flex justify-content-between">
+          <ul class="rating-star">
+            <li>
+              <i class="ti-star"></i>
+            </li>
+            <li>
+              <i class="ti-star"></i>
+            </li>
+            <li>
+              <i class="ti-star"></i>
+            </li>
+            <li>
+              <i class="ti-star"></i>
+            </li>
+            <li>
+              <i class="ti-star"></i>
+            </li>
+          </ul>
+    <h3 class="price-tag">{menu.food_price}</h3>
+        </div>
+      </div>
+    </div>
+    ))
     return (
       <div>
         <section class="section-margin mb-lg-100" id="menu sehat rekomendasi">
@@ -38,6 +79,7 @@ class PaketSehatKu extends Component {
 
             {/* data nanti ambil dari database */}
             <div class="owl-carousel owl-theme featured-carousel">
+              {paketSehat}
               <div class="featured-item">
                 <img class="card-img rounded-0" src={img1} onClick={this.handleShow} alt="" />
                 <div class="item-body">

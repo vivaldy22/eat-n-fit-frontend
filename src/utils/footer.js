@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import icon from "../assets/images/icons/enf.svg"
+import { Link } from "react-router-dom";
 
 class Footer extends Component {
   render() {
@@ -8,11 +9,13 @@ class Footer extends Component {
         <section class="cta-area text-center">
           <div >
             <p style={{color:"white" , fontFamily: "PT Serif"}}>Untuk Menikmati layanan kami</p>
-            <h2 style={{color:"white" , fontFamily: "PT Serif"}}>Download Aplikasi Eat 'N Fit sekarang juga yuk...</h2>
+            <h2 style={{color:"white" , fontFamily: "PT Serif"}}>Download Aplikasi Eat & Fit sekarang juga yuk...</h2>
+            <Link className="nav-link active" to="/contact" style={{color:"whitesmoke", fontFamily:"happy monkey", fontSize:"15px", fontWeight:"bold"}}>
             <a class="button"style={{backgroundColor:"#fcad10", fontStyle:"italic", 
-            fontFamily:"PT Serif", fontSize:"20px", color:"black"}}>
-              Download Aplikasi
+            fontFamily:"PT Serif", fontSize:"20px", color:"black"}} id="download button">
+              Download Aplikasi 
             </a>
+            </Link>
           </div>
         </section>
         <div className="container">

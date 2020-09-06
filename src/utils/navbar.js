@@ -59,10 +59,11 @@ class Navbar extends Component {
                   Cara Pesan
                 </a>
               </li>
-              <li class="nav-item">
-                <Link className="nav-link active" to="/contact" style={{color:"whitesmoke", fontFamily:"happy monkey", fontSize:"15px", fontWeight:"bold"}}>
-                  Unduh
-                </Link>
+              <li class="nav-item" >
+              <a class="nav-link" href="#download button"
+                  style={{color:"whitesmoke", fontFamily:"happy monkey", fontSize:"15px", fontWeight:"bold"}}>
+              Unduh
+              </a>
               </li>
             </ul>
           </div>

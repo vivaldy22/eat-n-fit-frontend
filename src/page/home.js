@@ -16,7 +16,7 @@ export default class Home extends Component {
         <div className="container">
           <div className="row mt-4">
             <PaketSehatKu />
-            <PaketSehatKita />
+            <PaketSehatKita/>
             <PaketSeafood/>
             <PaketDagingAyam/>
           </div>
