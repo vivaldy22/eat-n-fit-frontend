@@ -1,10 +1,24 @@
 {
-  "food_name": "Nasi",
-  "food_portion": "",
-  "food_calories": "",
-  "food_fat": "",
-  "food_carbs": "",
-  "food_protein": "",
-  "food_price": "",
-  "food_desc": ""
+  "menu": [
+    {
+      "food_name": "Nasi",
+      "food_portion": "456",
+      "food_calories": "45",
+      "food_fat": "234",
+      "food_carbs": "4324",
+      "food_protein": "4234",
+      "food_price": "4234",
+      "food_desc": "4234"
+    },
+    {
+      "food_name": "ayam geprek",
+      "food_portion": "456",
+      "food_calories": "45",
+      "food_fat": "234",
+      "food_carbs": "4324",
+      "food_protein": "4234",
+      "food_price": "4234",
+      "food_desc": "4234"
+    }
+  ]
 }

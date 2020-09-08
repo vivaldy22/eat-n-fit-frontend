@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { getMenu } from "../config/api";
+import { getMenu, getPacket } from "../config/api";
+import Food from "../json/food.json";
 class Catagory extends Component {
   constructor(props) {
     super(props);
@@ -14,10 +15,10 @@ class Catagory extends Component {
     this.loadData();
   }
   loadData = () => {
-    getMenu().then((res) => {
-      console.log("data User:", res.data);
-      this.setState({ ...this.state, menuList: res.data, isLoading: true });
-    });
+    // getPacket().then((res) => {
+    //   console.log("data di paket:", res);
+    //   this.setState({ ...this.state, menuList: res.data, isLoading: true });
+    // });
   };
 
   render() {
@@ -30,7 +31,7 @@ class Catagory extends Component {
                 <div class="col-sm-6">
                   <h1>DataTables</h1>
                 </div>
-                {console.log("ini dari json" + this.state.menuList)}
+
                 <div class="col-sm-6">
                   <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item">

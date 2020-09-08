@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import logo from "../img/logo.jpg";
 class Sidebar extends Component {
   render() {
     return (
@@ -19,14 +20,14 @@ class Sidebar extends Component {
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
               <div class="image">
                 <img
-                  src="dist/img/user2-160x160.jpg"
+                  src={logo}
                   class="img-circle elevation-2"
                   alt="User Image"
                 />
               </div>
               <div class="info">
                 <Link className="d-block" to="/">
-                  Eat 'N Fit
+                  Eat & Fit
                 </Link>
               </div>
             </div>
@@ -47,7 +48,7 @@ class Sidebar extends Component {
                 <li class="nav-item">
                   <Link className="nav-link" to="/catagory">
                     <i class="nav-icon fas fa-th"></i>
-                    <p>Data kategori</p>
+                    <p>Data Paket</p>
                   </Link>
                 </li>
                 <li class="nav-item">
@@ -56,6 +57,13 @@ class Sidebar extends Component {
                     <p>Data Makanan</p>
                   </Link>
                 </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="/user">
+                    <i class="nav-icon fas fa-users"></i>
+                    <p>Data User</p>
+                  </Link>
+                </li>
+
                 <p style={{ color: "white" }}>Orderan</p>
                 <li class="nav-item">
                   <Link className="nav-link" to="/order">
@@ -63,6 +71,15 @@ class Sidebar extends Component {
                     <p>Order</p>
                   </Link>
                 </li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
               </ul>
             </nav>
           </div>

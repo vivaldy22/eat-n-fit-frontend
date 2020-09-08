@@ -1,44 +1,37 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Food from "../json/food.json";
-import { getMenu, getFood } from "../config/api";
+import { getMenu, getFood, getUser } from "../config/api";
 import { Col } from "react-bootstrap";
 
-class DataMakanan extends Component {
+class DataUser extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      menuList: [],
+      userList: [],
       isLoading: false,
     };
   }
   componentDidMount() {
     this.loadData();
-    this.setState({
-      ...this.state,
-      menuList: Food.menu,
-    });
   }
   loadData = () => {
-    // getFood().then((res) => {
-    //   console.log("data User:", res);
-    //   this.setState({ ...this.state, menuList: res, isLoading: true });
-    // });
+    var token = sessionStorage.getItem("auth-token");
+    getUser(token).then((res) => {
+      console.log("data User:", res.user_id);
+      this.setState({ ...this.state, userList: res, isLoading: true });
+    });
   };
 
   render() {
-    const menu = this.state.menuList.map((list, index) => (
+    const user = this.state.userList.map((list, index) => (
       <tr>
         <td>{index + 1}</td>
-        <td>{list.food_name}</td>
-        <td>{list.food_calories}</td>
-        <td>{list.food_fat}</td>
-        <td>{list.food_carbs}</td>
-        <td>{list.food_protein}</td>
-        <td>{list.food_portion}</td>
-        <td>{list.food_price}</td>
-        <td>{list.food_desc}</td>
+        <td>{list.user_f_name}</td>
+        <td>{list.user_l_name}</td>
+        <td>{list.user_email}</td>
+        <td>{list.user_balance}</td>
         <td>
           <a title="Edit" style={{ marginRight: 15 }}>
             <i class="fas fa-edit" />
@@ -63,7 +56,7 @@ class DataMakanan extends Component {
                     <li class="breadcrumb-item">
                       <a href="#">Home</a>
                     </li>
-                    <li class="breadcrumb-item active">Data Makanan</li>
+                    <li class="breadcrumb-item active">Data User</li>
                   </ol>
                 </div>
               </div>
@@ -76,9 +69,9 @@ class DataMakanan extends Component {
                 <div class="col-12">
                   <div class="card">
                     <div class="card-header">
-                      <h3 class="card-title">Daftar Makanan</h3>
+                      <h3 class="card-title">Daftar User</h3>
                       <div className="d-flex flex-row-reverse">
-                        <Link className="brand-link" to="/addFood">
+                        <Link className="brand-link" to="/addUser">
                           <button className="btn btn-primary">Tambah</button>
                         </Link>
                       </div>
@@ -92,18 +85,14 @@ class DataMakanan extends Component {
                         <thead>
                           <tr>
                             <th>No</th>
-                            <th>Name</th>
-                            <th>kalori</th>
-                            <th>lemak</th>
-                            <th>karbonhidrat</th>
-                            <th>protein</th>
-                            <th>porsi</th>
-                            <th>harga</th>
-                            <th>deskripsi</th>
+                            <th>First Name</th>
+                            <th>Last name</th>
+                            <th>Email</th>
+                            <th>Balance</th>
                             <th>Action</th>
                           </tr>
                         </thead>
-                        <tbody>{menu}</tbody>
+                        <tbody>{user}</tbody>
                       </table>
                     </div>
                   </div>
@@ -117,4 +106,4 @@ class DataMakanan extends Component {
   }
 }
 
-export default DataMakanan;
+export default DataUser;

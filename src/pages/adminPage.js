@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Home from "../pages/home";
+
 import Dashboard from "../pages/dashboard";
 import Navbar from "../utils/navbar";
 import Sidebar from "../utils/sidebar";
@@ -7,8 +7,10 @@ import Catagory from "../pages/catagory";
 import Food from "../pages/dataMakanan";
 import OrderFood from "../pages/order";
 import AddCategory from "../pages/addCategory";
-import AddFood from "../pages/addFood";
+import AddFood from "./service/addFood";
+import AddUser from "./service/addUser";
 import { Route } from "react-router-dom";
+import DataUser from "./user";
 class AdminPage extends Component {
   render() {
     let { logOut } = this.props;
@@ -23,6 +25,8 @@ class AdminPage extends Component {
         <Route path="/order" component={OrderFood} />
         <Route path="/addCategory" component={AddCategory} />
         <Route path="/addFood" component={AddFood} />
+        <Route path="/addUser" component={AddUser} />
+        <Route path="/user" component={DataUser} />
       </div>
     );
   }
