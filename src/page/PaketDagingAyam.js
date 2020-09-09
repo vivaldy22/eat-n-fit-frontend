@@ -8,8 +8,8 @@ import imgAyamLadaHitam from "../img/home/ayam-lada-hitam.jpg"
 class PaketDagingAyam extends Component {
     render() {
         return (
-     <div style={{marginTop:"-60px"}}>
-        <section class="section-margin mb-lg-100" id="paket daging ayam">
+     <div style={{marginTop:"-60px"}} id="paketDagingAyam">
+        <section class="section-margin mb-lg-100">
           <div  class="container">
             <div class="section-intro mb-75px">
               <h4 class="intro-title" style={{fontFamily:"PT Serif", fontSize:"30px", color: "maroon"}}>Paket Daging Ayam</h4>

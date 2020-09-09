@@ -1,0 +1,17 @@
+.button{
+    height: 60px;
+    width: 300px;
+    background: #390003;
+    margin: 20px;
+    float: left;
+    border:0px;
+    color:#fff;
+    align-content: center;
+    box-shadow: 0 0 1px #ccc;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-box-shadow: 0px 0px 0 0 #fcad10 inset , 0px 0px 0 #fcad10 inset;
+}
+.button:hover{
+    -webkit-box-shadow: 0px 50px 0 0px #9b0101 inset , 0px -50px 0 0px #9b0101  inset; 
+}

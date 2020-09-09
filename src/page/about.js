@@ -4,7 +4,7 @@ class About extends Component {
   render() {
     return (
       <div>
-        <section class="about section-margin pb-xl-70">
+        <section class="about section-margin pb-xl-70" style={{marginTop:"80px"}}>
           <div class="container">
             <div class="row">
               <div class="col-md-6 col-xl-6 mb-5 mb-md-0 pb-5 pb-md-0">
@@ -29,7 +29,7 @@ class About extends Component {
                   <h2 style={{ color:"white" , fontFamily: "lora", fontSize:"100px" }}>Eat & Fit</h2>
                 </div >
                 <p style={{ color:"maroon" , fontFamily: "PT Serif", fontSize:"20px"}}>
-                  Eat 'N Fit penyedia jasa makanan sehat dengan varian menu yang
+                  Eat & Fit penyedia jasa makanan sehat dengan varian menu yang
                   lezat dan kandungan gizi yang diukur oleh Nutrisionist terbaik
                   berdasarkan takaran angka kecukupan gizi yang diberikan khusus
                   untuk konsumen .

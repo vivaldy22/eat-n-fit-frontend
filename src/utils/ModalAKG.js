@@ -16,10 +16,10 @@ class ModalAKG extends Component {
     };
 
     return (
-            <div>
+      <div>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>{``}</Modal.Title>
+            <Modal.Title>Kandungan AKG</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <img src={image} style={{ width: "100%" }} />
@@ -30,8 +30,7 @@ class ModalAKG extends Component {
             </Button>
           </Modal.Footer>
         </Modal>
-
-            </div>
+      </div>
     );
 }
 }

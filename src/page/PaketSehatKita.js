@@ -9,8 +9,8 @@ import imgWedding from "../img/home/wedding.jpg"
 class PaketSehatKita extends Component {
   render() {
     return (
-      <div style={{marginTop:"-60px"}}>
-        <section class="section-margin mb-lg-100" id="paket acara besar">
+      <div style={{marginTop:"-60px"}} id="paketAcaraBesar">
+        <section class="section-margin mb-lg-100">
           <div  class="container">
             <div class="section-intro mb-75px">
               <h4 class="intro-title" style={{fontFamily:"PT Serif", fontSize:"30px", color: "maroon"}}>Paket Sehat Kita</h4>

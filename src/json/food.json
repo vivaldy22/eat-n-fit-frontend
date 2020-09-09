@@ -1,26 +1,59 @@
 {
     "menu":[
         {
-            "food_name": "Nasi",
-            "food_portion": "2",
+            "food_name": "(Muscle Building) Steamed Teochew Sauce",
+            "food_portion": "1",
             "food_calories": "200",
             "food_fat": "12",
             "food_carbs": "1233",
             "food_protein": "23",
-            "food_price": "25000",
-            "food_desc": "enak banget woi mau meninggal",
-            "food_picture": "/img/home/gambar1.jpg"
+            "food_price": "25.000",
+            "food_desc": "Kreasi sehat dan lezat dari Eat & Fit dengan takaran gizi yang diukur oleh Nutritionist terbaik untuk konsumen yang fokus dalam pembentukan otot. Hidangan ini disajikan lengkap dengan Nasi Merah, Mun Tahu,  Cah Sawi & Wortel.",
+            "food_picture": "../img/home/gambar1.jpg"
         },
         {
-            "food_name": "Nasi",
+            "food_name": "(Menu Diet) Bola Bola Daging Cincang",
             "food_portion": "3",
             "food_calories": "200",
             "food_fat": "12",
             "food_carbs": "1245",
             "food_protein": "28",
             "food_price": "35000",
-            "food_desc": "enak banget woi mau meninggal eh gamau",
-            "food_picture": "/img/home/aqiqah.jpg"
+            "food_desc": "Menu Bola-Bola Daging Cincang, menggunakan daging pilihan yang minim akan lemak dan tinggi akan protein serta zat besi. Disajikan lengkap dengan Bubur Nasi Merah, Tumis Jamur Merang Cincang, dan Cah Sawi Putih Wortel Cincang",
+            "food_picture": "../img/home/bola_daging.jpg"
+        }, 
+        {
+            "food_name": "(Menu untuk Penderita Jantung) Beef Bulgogi with Shirataki Noodle",
+            "food_portion": "3",
+            "food_calories": "200",
+            "food_fat": "12",
+            "food_carbs": "1245",
+            "food_protein": "28",
+            "food_price": "35000",
+            "food_desc": "Kreasi hidangan daging pilihan yang minim akan lemak dan tinggi akan protein serta zat besi. Disajikan dengan shirataki noodle japchae style, spinach namul & kimchi.",
+            "food_picture": "../img/home/beef.jpg"
+        },
+        {
+            "food_name": "(Menu untuk Ibu Hamil) Vegetable Spring Roll Pregnancy",
+            "food_portion": "3",
+            "food_calories": "200",
+            "food_fat": "12",
+            "food_carbs": "1245",
+            "food_protein": "28",
+            "food_price": "35000",
+            "food_desc": "Menu ayam goreng mentega yang rendah lemak dan kalori serta mengandung protein. Disajikan lengkap dengan Brown rice, ayam goreng mentega, vegetable spring roll, serta Greenbeans.",
+            "food_picture": "../img/home/pregnancy.jpg"
+        },
+        {
+            "food_name": "(Menu Vegetarian) Tongseng Jamur Tiram",
+            "food_portion": "3",
+            "food_calories": "200",
+            "food_fat": "12",
+            "food_carbs": "1245",
+            "food_protein": "28",
+            "food_price": "35000",
+            "food_desc": "Kelezatan tongseng jamur tiram dalam paket vegetarian yang disajikan lengkap dengan nasi merah bakar, wok fried greenpeas dan paprika, tumis putren, dan wortel. Sangat direkomendasikan bagi anda yang merupak seorang vegetarian",
+            "food_picture": "../img/home/vegetarian.jpg"
         }
     ]
 }
