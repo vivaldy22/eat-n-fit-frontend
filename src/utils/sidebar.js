@@ -63,7 +63,6 @@ class Sidebar extends Component {
                     <p>Data User</p>
                   </Link>
                 </li>
-
                 <p style={{ color: "white" }}>Orderan</p>
                 <li class="nav-item">
                   <Link className="nav-link" to="/order">
@@ -71,15 +70,6 @@ class Sidebar extends Component {
                     <p>Order</p>
                   </Link>
                 </li>
-                <li class="nav-item"></li>
-                <li class="nav-item"></li>
-                <li class="nav-item"></li>
-                <li class="nav-item"></li>
-                <li class="nav-item"></li>
-                <li class="nav-item"></li>
-                <li class="nav-item"></li>
-                <li class="nav-item"></li>
-                <li class="nav-item"></li>
               </ul>
             </nav>
           </div>

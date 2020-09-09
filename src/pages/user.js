@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Food from "../json/food.json";
 import { getMenu, getFood, getUser } from "../config/api";
+import loading from "../img/loading.gif";
 import { Col } from "react-bootstrap";
 
 class DataUser extends Component {
@@ -33,9 +34,13 @@ class DataUser extends Component {
         <td>{list.user_email}</td>
         <td>{list.user_balance}</td>
         <td>
-          <a title="Edit" style={{ marginRight: 15 }}>
+          <Link
+            title="Edit"
+            style={{ marginRight: 15 }}
+            to={`/editUser/${list.user_id}`}
+          >
             <i class="fas fa-edit" />
-          </a>
+          </Link>
           <button>
             <i class="fas fa-trash" />
           </button>
@@ -78,22 +83,26 @@ class DataUser extends Component {
                     </div>
 
                     <div class="card-body">
-                      <table
-                        id="example2"
-                        class="table table-bordered table-hover"
-                      >
-                        <thead>
-                          <tr>
-                            <th>No</th>
-                            <th>First Name</th>
-                            <th>Last name</th>
-                            <th>Email</th>
-                            <th>Balance</th>
-                            <th>Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>{user}</tbody>
-                      </table>
+                      {this.state.isLoading ? (
+                        <table
+                          id="example2"
+                          class="table table-bordered table-hover"
+                        >
+                          <thead>
+                            <tr>
+                              <th>No</th>
+                              <th>First Name</th>
+                              <th>Last name</th>
+                              <th>Email</th>
+                              <th>Balance</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>{user}</tbody>
+                        </table>
+                      ) : (
+                        <img src={loading} style={{ marginLeft: 180 }} />
+                      )}
                     </div>
                   </div>
                 </div>

@@ -11,6 +11,7 @@ import AddFood from "./service/addFood";
 import AddUser from "./service/addUser";
 import { Route } from "react-router-dom";
 import DataUser from "./user";
+import EditUser from "./service/editUser";
 class AdminPage extends Component {
   render() {
     let { logOut } = this.props;
@@ -26,6 +27,7 @@ class AdminPage extends Component {
         <Route path="/addCategory" component={AddCategory} />
         <Route path="/addFood" component={AddFood} />
         <Route path="/addUser" component={AddUser} />
+        <Route path="/editUser/:id" component={EditUser} />
         <Route path="/user" component={DataUser} />
       </div>
     );

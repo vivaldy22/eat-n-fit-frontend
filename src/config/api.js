@@ -22,7 +22,33 @@ export const getUser = async (token) => {
   console.log(res);
   return await res.data;
 };
+export const getUserById = async (id, token) => {
+  const res = await axios.get(`${BaseUrl}/admin/users/${id}`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  console.log(res);
+  return await res.data;
+};
 
+export const addUser = async (user, token) => {
+  console.log(user);
+  console.log(token);
+  const res = await axios.post(`${BaseUrl}/admin/users`, user, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  console.log(res);
+  return await res.data;
+};
+
+export const getLevel = async (token) => {
+  const res = await axios.get(`${BaseUrl}/admin/levels`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  console.log(res);
+  return await res.data;
+};
 export const getMenu = async () => {
   const res = await axios.get(Food);
   return await res.menu;

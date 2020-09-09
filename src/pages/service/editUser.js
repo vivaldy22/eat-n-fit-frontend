@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { getLevel, addUser } from "../../config/api";
-export default class AddUser extends Component {
+import { getLevel, addUser, getUserById } from "../../config/api";
+
+export default class EditUser extends Component {
   constructor(props) {
     super(props);
 
@@ -12,17 +13,28 @@ export default class AddUser extends Component {
       gender: "",
       password: "",
       isLoading: false,
+      user: [],
       levels: [],
     };
   }
   componentDidMount() {
     this.loadData();
+    this.userById(this.props.match.params.id);
   }
   loadData = () => {
     var token = sessionStorage.getItem("auth-token");
     getLevel(token).then((res) => {
-      this.setState({ ...this.state, levels: res, isLoading: true });
+      this.setState({ ...this.state, levels: res });
     });
+  };
+
+  userById = (id) => {
+    var token = sessionStorage.getItem("auth-token");
+    getUserById(id, token)
+      .then((res) => {
+        this.setState({ ...this.state, user: res, isLoading: true });
+      })
+      .catch((e) => {});
   };
 
   handleSubmit = () => {
@@ -66,7 +78,7 @@ export default class AddUser extends Component {
             <div class="row mt-3 d-flex justify-content-center">
               <div class="card card-primary">
                 <div class="card-header">
-                  <h3 class="card-title">Tambah User</h3>
+                  <h3 class="card-title">Edit User</h3>
                 </div>
                 <div class="card-body">
                   <div className="row">
@@ -79,6 +91,7 @@ export default class AddUser extends Component {
                           id="Nama_Depan"
                           name="firstName"
                           placeholder="Nama Depan"
+                          value={this.state.user.user_f_name}
                           onChange={this.handleChange}
                         />
                       </div>
@@ -92,6 +105,7 @@ export default class AddUser extends Component {
                           id="Nama_Belakang"
                           name="lastName"
                           placeholder="Nama Belakang"
+                          value={this.state.user.user_l_name}
                           onChange={this.handleChange}
                         />
                       </div>
@@ -107,6 +121,7 @@ export default class AddUser extends Component {
                           id="exampleInputPassword1"
                           name="email"
                           placeholder="email"
+                          value={this.state.user.user_email}
                           onChange={this.handleChange}
                         />
                       </div>

@@ -38,6 +38,7 @@ const LoginNew = () => {
           onLogin(res.token);
         } else {
           console.log("error");
+          Swal.fire("", "username dan password salah", "error");
         }
       })
       .catch((e) => {
