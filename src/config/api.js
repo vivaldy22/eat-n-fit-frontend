@@ -66,3 +66,36 @@ export const getMenu = async () => {
   const res = await axios.get(Food);
   return await res.menu;
 };
+
+export const getFood = async (token) => {
+  const res = await axios.get(`${BaseUrl}/admin/foods`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+  return await res.data;
+};
+
+export const addFood = async (food, token) => {
+  console.log(food);
+  console.log(token);
+  const res = await axios.post(`${BaseUrl}/admin/foods`, food, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  return await res.data;
+};
+
+export const uploadImage = async (idImage, fileImage, token) => {
+  let formData = await new FormData();
+  await formData.append("upload-file", fileImage);
+  const res = await axios.post(`${BaseUrl}/upload/${idImage}`, formData, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "multipart/form-data",
+    },
+  });
+
+  return await res.data;
+};

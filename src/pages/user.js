@@ -11,10 +11,6 @@ const DataUser = () => {
   const [isLoading, setLoading] = useState(false);
   const [idUser, setIdUser] = useState("");
 
-  useEffect(() => {
-    loadData();
-  }, []);
-
   const loadData = () => {
     var token = sessionStorage.getItem("auth-token");
     getUser(token).then((res) => {
@@ -37,9 +33,13 @@ const DataUser = () => {
       .then((res) => {
         Swal.fire("", "Hapus User", "success");
         setShow(false);
+        loadData();
       })
       .catch((e) => {});
   };
+  useEffect(() => {
+    loadData();
+  }, []);
 
   const user = userList.map((list, index) => (
     <tr>

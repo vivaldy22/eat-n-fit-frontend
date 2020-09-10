@@ -23,7 +23,6 @@ const LoginNew = () => {
 
   const onLogin = (token) => {
     setIsLogin(true);
-
     sessionStorage.setItem("auth-token", token);
   };
 
@@ -35,6 +34,7 @@ const LoginNew = () => {
     authLogin(Login)
       .then((res) => {
         if (res.user.user_level == 1) {
+          Swal.fire("", "berhasil login", "success");
           onLogin(res.token);
         } else {
           console.log("error");

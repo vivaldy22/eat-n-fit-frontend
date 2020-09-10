@@ -1,19 +1,28 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import checkboxes from "../utils/checkbox";
-import Checkbox from "../utils/Checkboxes";
+import checkboxes from "../../utils/checkbox";
+import Checkbox from "../../utils/Checkboxes";
 export default class AddCategory extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      listItem: [],
+    };
   }
   handleChange(e) {
     const item = e.target.value;
 
     const value =
       e.target.type === "checkbox" ? e.target.checked : e.target.value;
+
+    if (value == true) {
+      this.setState({
+        ...this.state.listItem.push(item),
+      });
+    }
     console.log(value);
+    console.log(item);
   }
   render() {
     return (
@@ -25,7 +34,7 @@ export default class AddCategory extends Component {
                 <div class="card-header">
                   <h3 class="card-title">Tambah Paket</h3>
                 </div>
-
+                {console.log(this.state.listItem)}
                 <form role="form">
                   <div class="card-body">
                     <div class="form-group">
@@ -46,7 +55,11 @@ export default class AddCategory extends Component {
                     </div>
 
                     <div className="row">
-                      <input type="checkbox" value="satu" />
+                      <input
+                        type="checkbox"
+                        value="satu"
+                        onChange={this.handleChange}
+                      />
                     </div>
                     <div className="row">
                       <input

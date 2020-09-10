@@ -14,6 +14,7 @@ export default class EditUser extends Component {
       gender: "",
       password: "",
       isLoading: false,
+      disable: false,
       levels: [],
     };
   }
@@ -49,6 +50,7 @@ export default class EditUser extends Component {
   };
 
   handleSubmit = () => {
+    this.setState({ ...this.state, disable: true });
     const user = {
       user_email: this.state.email,
       user_password: this.state.password,
@@ -184,13 +186,24 @@ export default class EditUser extends Component {
                 </div>
 
                 <div class="card-footer d-flex  justify-content-center">
-                  <button
-                    type="submit"
-                    class="btn btn-primary"
-                    onClick={this.handleSubmit}
-                  >
-                    Edit User
-                  </button>
+                  {this.state.disable ? (
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      onClick={this.handleSubmit}
+                      disabled
+                    >
+                      Edit User
+                    </button>
+                  ) : (
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      onClick={this.handleSubmit}
+                    >
+                      Edit User
+                    </button>
+                  )}
                 </div>
               </div>
             </div>

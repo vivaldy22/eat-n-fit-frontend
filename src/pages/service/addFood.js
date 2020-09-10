@@ -1,6 +1,77 @@
 import React, { Component } from "react";
-
+import { addFood, uploadImage } from "../../config/api";
+import Swal from "sweetalert2";
+import loading from "../../img/loading3.gif";
 export default class AddFood extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      foodPortion: "",
+      foodName: "",
+      foodCalories: "",
+      foodFat: "",
+      foodCarbs: "",
+      foodProtein: "",
+      foodPrice: "",
+      foodDesc: "",
+      imageFood: "",
+      isLoading: false,
+      disable: false,
+    };
+  }
+
+  handleChange = (event) => {
+    let name = event.target.name;
+    let value = event.target.value;
+
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  handleChangeFile = (event) => {
+    let name = event.target.name;
+    let value = event.target.files[0];
+
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  handleSubmit = () => {
+    this.setState({ ...this.state, isLoading: true });
+    const food = {
+      food_portion: this.state.foodPortion,
+      food_name: this.state.foodName,
+      food_calories: this.state.foodCalories,
+      food_fat: this.state.foodFat,
+      food_carbs: this.state.foodCarbs,
+      food_protein: this.state.foodProtein,
+      food_price: this.state.foodPrice,
+      food_desc: this.state.foodDesc,
+    };
+    const token = sessionStorage.getItem("auth-token");
+
+    console.log(food);
+    addFood(food, token)
+      .then((res) => {
+        uploadImage(res.food_id, this.state.imageFood, token)
+          .then((res) => {
+            Swal.fire("", "Tambah Makananan", "success");
+            this.props.history.push({
+              pathname: "/makanan",
+            });
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+      })
+      .catch((e) => {
+        Swal.fire("", "Tambah Makananan", "failed");
+      });
+  };
+
   render() {
     return (
       <div>
@@ -12,153 +83,258 @@ export default class AddFood extends Component {
                   <h3 class="card-title">Tambah Makanan</h3>
                 </div>
 
-                <form role="form">
-                  <div class="card-body">
-                    <div className="row">
-                      <div className="col-6">
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Nama Paket</label>
-                          <select class="form-control" name="Paket">
-                            <option>Paket Menu 1</option>
-                            <option>Paket Menu 2</option>
-                            <option>Paket Menu 3</option>
-                            <option>Paket Menu 4</option>
-                            <option>Paket Menu 5</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div className="col-6">
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Nama Menu</label>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Nama Menu</label>
+                    {this.state.isLoading ? (
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                        name="foodName"
+                        disabled
+                        placeholder="Nama Menu"
+                        onChange={this.handleChange}
+                      />
+                    ) : (
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                        name="foodName"
+                        placeholder="Nama Menu"
+                        onChange={this.handleChange}
+                      />
+                    )}
+                  </div>
+
+                  <label for="exampleInputPassword1">AKG Makanan</label>
+                  <div className="row">
+                    <div className="col-6">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Protein</label>
+                        {this.state.isLoading ? (
                           <input
                             type="text"
                             class="form-control"
                             id="exampleInputPassword1"
-                            name="nama_menu"
-                            placeholder="Nama Menu"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <label for="exampleInputPassword1">AKG Makanan</label>
-                    <div className="row">
-                      <div className="col-6">
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Protein</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputPassword1"
-                            name="protein"
+                            name="foodProtein"
                             placeholder="Protein"
+                            disabled
+                            onChange={this.handleChange}
                           />
-                        </div>
-                      </div>
-                      <div className="col-6">
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Karbohidrat</label>
+                        ) : (
                           <input
                             type="text"
                             class="form-control"
                             id="exampleInputPassword1"
-                            name="Karbohidrat"
+                            name="foodProtein"
+                            placeholder="Protein"
+                            onChange={this.handleChange}
+                          />
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Karbohidrat</label>
+                        {this.state.isLoading ? (
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                            name="foodCarbs"
                             placeholder="Karbohidrat"
+                            disabled
+                            onChange={this.handleChange}
                           />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="row">
-                      <div className="col-6">
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Lemak</label>
+                        ) : (
                           <input
                             type="text"
                             class="form-control"
                             id="exampleInputPassword1"
-                            name="Lemak"
+                            name="foodCarbs"
+                            placeholder="Karbohidrat"
+                            onChange={this.handleChange}
+                          />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="row">
+                    <div className="col-6">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Lemak</label>
+                        {this.state.isLoading ? (
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                            name="foodFat"
                             placeholder="Lemak"
+                            disabled
+                            onChange={this.handleChange}
                           />
-                        </div>
-                      </div>
-                      <div className="col-6">
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">kalori</label>
+                        ) : (
                           <input
                             type="text"
                             class="form-control"
                             id="exampleInputPassword1"
-                            name="kalori"
-                            placeholder="kalori"
+                            name="foodFat"
+                            placeholder="Lemak"
+                            onChange={this.handleChange}
                           />
-                        </div>
+                        )}
                       </div>
                     </div>
+                    <div className="col-6">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">kalori</label>
+                        {this.state.isLoading ? (
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                            name="foodCalories"
+                            placeholder="kalori"
+                            disabled
+                            onChange={this.handleChange}
+                          />
+                        ) : (
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                            name="foodCalories"
+                            placeholder="kalori"
+                            onChange={this.handleChange}
+                          />
+                        )}
+                      </div>
+                    </div>
+                  </div>
 
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Deskripsi Menu</label>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Deskripsi Menu</label>
+                    {this.state.isLoading ? (
                       <textarea
                         class="form-control"
                         rows="3"
                         placeholder="Deskripsi Menu"
-                        name="deskripsi"
+                        name="foodDesc"
+                        disabled
+                        onChange={this.handleChange}
                       ></textarea>
-                    </div>
+                    ) : (
+                      <textarea
+                        class="form-control"
+                        rows="3"
+                        placeholder="Deskripsi Menu"
+                        name="foodDesc"
+                        onChange={this.handleChange}
+                      ></textarea>
+                    )}
+                  </div>
 
-                    <div className="row">
-                      <div className="col-6">
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Harga Menu</label>
+                  <div className="row">
+                    <div className="col-6">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Harga Menu</label>
+                        {this.state.isLoading ? (
                           <input
                             type="text"
                             class="form-control"
                             id="exampleInputPassword1"
-                            name="harga"
+                            name="foodPrice"
                             placeholder="Harga Menu"
+                            disabled
+                            onChange={this.handleChange}
                           />
-                        </div>
+                        ) : (
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                            name="foodPrice"
+                            placeholder="Harga Menu"
+                            onChange={this.handleChange}
+                          />
+                        )}
                       </div>
-                      <div className="col-6">
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Rating Menu</label>
+                    </div>
+                    <div className="col-6">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Porsi Menu</label>
+                        {this.state.isLoading ? (
                           <input
                             type="number"
                             class="form-control"
                             id="exampleInputPassword1"
-                            name="rating"
-                            placeholder="Rating Menu"
+                            name="foodPortion"
+                            placeholder="Porsi Menu"
+                            disabled
+                            onChange={this.handleChange}
                           />
-                        </div>
+                        ) : (
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                            name="foodPortion"
+                            placeholder="Porsi Menu"
+                            onChange={this.handleChange}
+                          />
+                        )}
                       </div>
                     </div>
+                  </div>
 
-                    <div class="form-group">
-                      <label for="exampleInputFile">Gambar Menu</label>
-                      <div class="input-group">
-                        <div class="custom-file">
+                  <div class="form-group">
+                    <label for="exampleInputFile">Gambar Menu</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <label class="custom-file-label" for="exampleInputFile">
+                          {this.state.imageFood.name || "choose file"}
+                        </label>
+                        {this.state.isLoading ? (
                           <input
                             type="file"
-                            name="gambar"
+                            name="imageFood"
                             class="custom-file-input"
                             id="exampleInputFile"
+                            disabled
+                            onChange={this.handleChangeFile}
                           />
-                          <label
-                            class="custom-file-label"
-                            for="exampleInputFile"
-                          >
-                            Choose file
-                          </label>
-                        </div>
+                        ) : (
+                          <input
+                            type="file"
+                            name="imageFood"
+                            class="custom-file-input"
+                            id="exampleInputFile"
+                            onChange={this.handleChangeFile}
+                          />
+                        )}
                       </div>
                     </div>
                   </div>
+                </div>
 
-                  <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">
-                      Submit
-                    </button>
+                <div class="card-footer" style={{ background: "#add6f7ff" }}>
+                  <div className="row  d-flex justify-content-center">
+                    {this.state.isLoading ? (
+                      <img src={loading} style={{ height: 50, width: 50 }} />
+                    ) : (
+                      <button
+                        type="submit"
+                        class="btn btn-primary "
+                        onClick={this.handleSubmit}
+                      >
+                        Submit
+                      </button>
+                    )}
                   </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>

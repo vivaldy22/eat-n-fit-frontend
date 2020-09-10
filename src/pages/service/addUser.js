@@ -14,6 +14,7 @@ export default class AddUser extends Component {
       password: "",
       balance: "",
       isLoading: false,
+      disable: false,
       levels: [],
     };
   }
@@ -28,6 +29,7 @@ export default class AddUser extends Component {
   };
 
   handleSubmit = () => {
+    this.setState({ ...this.state, disable: true });
     const user = {
       user_email: this.state.email,
       user_password: this.state.password,
@@ -152,6 +154,8 @@ export default class AddUser extends Component {
                           name="level"
                           onChange={this.handleChange}
                         >
+                          {" "}
+                          <option>--Level User--</option>
                           {levelUser}
                         </select>
                       </div>
@@ -171,13 +175,24 @@ export default class AddUser extends Component {
                 </div>
 
                 <div class="card-footer d-flex  justify-content-center">
-                  <button
-                    type="submit"
-                    class="btn btn-primary"
-                    onClick={this.handleSubmit}
-                  >
-                    Submit
-                  </button>
+                  {this.state.disable ? (
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      onClick={this.handleSubmit}
+                      disabled
+                    >
+                      Submit
+                    </button>
+                  ) : (
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      onClick={this.handleSubmit}
+                    >
+                      Submit
+                    </button>
+                  )}
                 </div>
               </div>
             </div>

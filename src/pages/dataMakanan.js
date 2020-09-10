@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Food from "../json/food.json";
 import { getMenu, getFood } from "../config/api";
-import { Col } from "react-bootstrap";
+import loading from "../img/loading.gif";
 
 class DataMakanan extends Component {
   constructor(props) {
@@ -15,16 +15,17 @@ class DataMakanan extends Component {
   }
   componentDidMount() {
     this.loadData();
-    this.setState({
-      ...this.state,
-      menuList: Food.menu,
-    });
+    // this.setState({
+    //   ...this.state,
+    //   menuList: Food.menu,
+    // });
   }
   loadData = () => {
-    // getFood().then((res) => {
-    //   console.log("data User:", res);
-    //   this.setState({ ...this.state, menuList: res, isLoading: true });
-    // });
+    var token = sessionStorage.getItem("auth-token");
+    getFood(token).then((res) => {
+      console.log("data User:", res);
+      this.setState({ ...this.state, menuList: res, isLoading: true });
+    });
   };
 
   render() {
@@ -40,10 +41,21 @@ class DataMakanan extends Component {
         <td>{list.food_price}</td>
         <td>{list.food_desc}</td>
         <td>
-          <a title="Edit" style={{ marginRight: 15 }}>
+          <button
+            title="Edit"
+            className="btn btn-success btn-sm"
+            style={{ marginRight: 15 }}
+          >
             <i class="fas fa-edit" />
-          </a>
-          <button>
+          </button>
+          <button
+            title="Edit"
+            className="btn btn-info btn-sm"
+            style={{ marginRight: 15 }}
+          >
+            <i class="fas fa-list" />
+          </button>
+          <button className="btn btn-danger btn-sm">
             <i class="fas fa-trash" />
           </button>
         </td>
@@ -85,26 +97,30 @@ class DataMakanan extends Component {
                     </div>
 
                     <div class="card-body">
-                      <table
-                        id="example2"
-                        class="table table-bordered table-hover"
-                      >
-                        <thead>
-                          <tr>
-                            <th>No</th>
-                            <th>Name</th>
-                            <th>kalori</th>
-                            <th>lemak</th>
-                            <th>karbonhidrat</th>
-                            <th>protein</th>
-                            <th>porsi</th>
-                            <th>harga</th>
-                            <th>deskripsi</th>
-                            <th>Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>{menu}</tbody>
-                      </table>
+                      {this.state.isLoading ? (
+                        <table
+                          id="example2"
+                          class="table table-bordered table-hover"
+                        >
+                          <thead>
+                            <tr>
+                              <th>No</th>
+                              <th>Name</th>
+                              <th>kalori</th>
+                              <th>lemak</th>
+                              <th>karbonhidrat</th>
+                              <th>protein</th>
+                              <th>porsi</th>
+                              <th>harga</th>
+                              <th>deskripsi</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>{menu}</tbody>
+                        </table>
+                      ) : (
+                        <img src={loading} style={{ marginLeft: 180 }} />
+                      )}
                     </div>
                   </div>
                 </div>

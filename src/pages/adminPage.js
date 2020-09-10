@@ -6,7 +6,7 @@ import Sidebar from "../utils/sidebar";
 import Catagory from "../pages/catagory";
 import Food from "../pages/dataMakanan";
 import OrderFood from "../pages/order";
-import AddCategory from "../pages/addCategory";
+import AddCategory from "./service/addCategory";
 import AddFood from "./service/addFood";
 import AddUser from "./service/addUser";
 import { Route } from "react-router-dom";
