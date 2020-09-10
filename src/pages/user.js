@@ -65,7 +65,7 @@ const DataUser = () => {
   if (total % limit != 0) {
     maks++;
   }
-  console.log(maks);
+
   for (let number = 1; number <= maks; number++) {
     items.push(
       <Pagination.Item
@@ -168,7 +168,23 @@ const DataUser = () => {
                     )}
                   </div>
                   <div className="card-footer d-flex justify-content-end">
-                    <Pagination size="sm">{items}</Pagination>
+                    <Pagination size="sm">
+                      <Pagination.Prev
+                        onClick={() => {
+                          setLoading(false);
+                          loadData(page - 1, limit, keyword);
+                          setPage(page - 1);
+                        }}
+                      />{" "}
+                      {items}
+                      <Pagination.Next
+                        onClick={() => {
+                          setLoading(false);
+                          setPage(page + 1);
+                          loadData(page, limit, keyword);
+                        }}
+                      />
+                    </Pagination>
                   </div>
                 </div>
               </div>
