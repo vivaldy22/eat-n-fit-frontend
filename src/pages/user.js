@@ -1,19 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import { getUser, deleteUser } from "../config/api";
+import { getUser, deleteUser, getTotalUser } from "../config/api";
 import loading from "../img/loading.gif";
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, Pagination } from "react-bootstrap";
 
 const DataUser = () => {
   const [show, setShow] = useState(false);
   const [userList, setUserList] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [idUser, setIdUser] = useState("");
+  const [page, setPage] = useState("1");
+  const [limit, setLimit] = useState("2");
+  const [keyword, setKeyword] = useState("");
+  const [total, setTotal] = useState("");
 
-  const loadData = () => {
+  const loadData = (page, limit, keyword) => {
     var token = sessionStorage.getItem("auth-token");
-    getUser(token).then((res) => {
+    const paging = {
+      page,
+      limit,
+      keyword,
+    };
+    getUser(paging, token).then((res) => {
       setUserList(res);
       setLoading(true);
     });
@@ -37,13 +46,45 @@ const DataUser = () => {
       })
       .catch((e) => {});
   };
+  const getTotal = () => {
+    var token = sessionStorage.getItem("auth-token");
+    getTotalUser(token)
+      .then((res) => {
+        setTotal(res.total_data);
+        console.log(res);
+      })
+      .catch((e) => {});
+  };
   useEffect(() => {
-    loadData();
+    loadData(page, limit, keyword);
+    getTotal();
   }, []);
+
+  let maks = total / limit;
+  let items = [];
+  if (total % limit != 0) {
+    maks++;
+  }
+  console.log(maks);
+  for (let number = 1; number <= maks; number++) {
+    items.push(
+      <Pagination.Item
+        key={number}
+        active={number == page}
+        onClick={() => {
+          setLoading(false);
+          loadData(number, limit, keyword);
+          setPage(number);
+        }}
+      >
+        {number}
+      </Pagination.Item>
+    );
+  }
 
   const user = userList.map((list, index) => (
     <tr>
-      <td>{index + 1}</td>
+      <td>{page == 1 ? index + 1 : index + 1 + Number(limit)}</td>
       <td>{list.user_f_name}</td>
       <td>{list.user_l_name}</td>
       <td>{list.user_email}</td>
@@ -125,6 +166,9 @@ const DataUser = () => {
                     ) : (
                       <img src={loading} style={{ marginLeft: 180 }} />
                     )}
+                  </div>
+                  <div className="card-footer d-flex justify-content-end">
+                    <Pagination size="sm">{items}</Pagination>
                   </div>
                 </div>
               </div>

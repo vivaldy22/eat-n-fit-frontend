@@ -1,28 +1,33 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Food from "../json/food.json";
 import { getMenu, getFood } from "../config/api";
 import loading from "../img/loading.gif";
-
+import { Modal, Button, Pagination } from "react-bootstrap";
 class DataMakanan extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       menuList: [],
+      page: 1,
+      limit: 2,
+      active: 1,
+      keyword: "",
+
       isLoading: false,
     };
   }
   componentDidMount() {
-    this.loadData();
-    // this.setState({
-    //   ...this.state,
-    //   menuList: Food.menu,
-    // });
+    this.loadData(this.state.page, this.state.limit, this.state.keyword);
   }
-  loadData = () => {
+  loadData = (page, limit, keyword) => {
     var token = sessionStorage.getItem("auth-token");
-    getFood(token).then((res) => {
+    const paging = {
+      page,
+      limit,
+      keyword,
+    };
+    getFood(paging, token).then((res) => {
       console.log("data User:", res);
       this.setState({ ...this.state, menuList: res, isLoading: true });
     });
@@ -122,6 +127,7 @@ class DataMakanan extends Component {
                         <img src={loading} style={{ marginLeft: 180 }} />
                       )}
                     </div>
+                    <div className="card-footer d-flex justify-content-end"></div>
                   </div>
                 </div>
               </div>

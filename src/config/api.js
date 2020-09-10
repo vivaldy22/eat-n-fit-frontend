@@ -1,21 +1,25 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Food from "../json/food.json";
 
 var BaseUrl = "";
-// axios.defaults.baseURL = "http://39c50d74fba9.ngrok.io";
-// axios.defaults.headers.post["Content-Type"] =
-//   "application/x-www-form-urlencoded";
 export const authLogin = async (Login) => {
   const res = await axios.post(`${BaseUrl}/auth/login`, Login);
   return await res.data;
 };
 
-export const getUser = async (token) => {
-  const res = await axios.get(`${BaseUrl}/admin/users`, {
+export const getUser = async ({ page, limit, keyword }, token) => {
+  const res = await axios.get(
+    `${BaseUrl}/admin/users?page=${page}&limit=${limit}&keyword=${keyword}`,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
+  return await res.data;
+};
+export const getTotalUser = async (token) => {
+  const res = await axios.get(`${BaseUrl}/admin/users/total`, {
     headers: { Authorization: `Bearer ${token}` },
   });
-
   return await res.data;
 };
 export const getUserById = async (id, token) => {
@@ -62,15 +66,14 @@ export const getLevel = async (token) => {
 
   return await res.data;
 };
-export const getMenu = async () => {
-  const res = await axios.get(Food);
-  return await res.menu;
-};
 
-export const getFood = async (token) => {
-  const res = await axios.get(`${BaseUrl}/admin/foods`, {
-    headers: { Authorization: `Bearer ${token}` },
-  });
+export const getFood = async ({ page, limit, keyword }, token) => {
+  const res = await axios.get(
+    `${BaseUrl}/admin/foods?page=${page}&limit=${limit}&keyword=${keyword}`,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
 
   return await res.data;
 };

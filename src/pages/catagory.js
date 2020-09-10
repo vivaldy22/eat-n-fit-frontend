@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { getMenu, getPacket } from "../config/api";
-import Food from "../json/food.json";
+
 class Catagory extends Component {
   constructor(props) {
     super(props);
