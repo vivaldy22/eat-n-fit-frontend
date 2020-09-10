@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { getLevel, addUser, getUserById } from "../../config/api";
-
+import { getLevel, updateUser, getUserById } from "../../config/api";
+import Swal from "sweetalert2";
 export default class EditUser extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      user_id: "",
       firstName: "",
       lastName: "",
       email: "",
@@ -13,7 +14,6 @@ export default class EditUser extends Component {
       gender: "",
       password: "",
       isLoading: false,
-      user: [],
       levels: [],
     };
   }
@@ -32,7 +32,18 @@ export default class EditUser extends Component {
     var token = sessionStorage.getItem("auth-token");
     getUserById(id, token)
       .then((res) => {
-        this.setState({ ...this.state, user: res, isLoading: true });
+        console.log(res.user_email);
+        this.setState({
+          ...this.state,
+          user_id: res.user_id,
+          firstName: res.user_f_name,
+          lastName: res.user_l_name,
+          email: res.user_email,
+          level: res.user_level,
+          gender: res.user_gender,
+          password: res.user_password,
+          isLoading: true,
+        });
       })
       .catch((e) => {});
   };
@@ -44,13 +55,15 @@ export default class EditUser extends Component {
       user_f_name: this.state.firstName,
       user_l_name: this.state.lastName,
       user_gender: this.state.gender,
+      user_balance: "0",
       user_level: this.state.level,
+      user_status: "1",
     };
     const token = sessionStorage.getItem("auth-token");
-
-    addUser(user, token)
+    var idUser = this.state.user_id;
+    updateUser(idUser, user, token)
       .then((res) => {
-        console.log("berhasil");
+        Swal.fire("", "Edit User", "success");
         this.props.history.push({
           pathname: "/user",
         });
@@ -91,7 +104,7 @@ export default class EditUser extends Component {
                           id="Nama_Depan"
                           name="firstName"
                           placeholder="Nama Depan"
-                          value={this.state.user.user_f_name}
+                          value={this.state.firstName}
                           onChange={this.handleChange}
                         />
                       </div>
@@ -105,7 +118,7 @@ export default class EditUser extends Component {
                           id="Nama_Belakang"
                           name="lastName"
                           placeholder="Nama Belakang"
-                          value={this.state.user.user_l_name}
+                          value={this.state.lastName}
                           onChange={this.handleChange}
                         />
                       </div>
@@ -121,7 +134,7 @@ export default class EditUser extends Component {
                           id="exampleInputPassword1"
                           name="email"
                           placeholder="email"
-                          value={this.state.user.user_email}
+                          value={this.state.email}
                           onChange={this.handleChange}
                         />
                       </div>
@@ -176,7 +189,7 @@ export default class EditUser extends Component {
                     class="btn btn-primary"
                     onClick={this.handleSubmit}
                   >
-                    Submit
+                    Edit User
                   </button>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getLevel, addUser } from "../../config/api";
+import Swal from "sweetalert2";
 export default class AddUser extends Component {
   constructor(props) {
     super(props);
@@ -11,6 +12,7 @@ export default class AddUser extends Component {
       level: "",
       gender: "",
       password: "",
+      balance: "",
       isLoading: false,
       levels: [],
     };
@@ -32,13 +34,15 @@ export default class AddUser extends Component {
       user_f_name: this.state.firstName,
       user_l_name: this.state.lastName,
       user_gender: this.state.gender,
+      user_balance: this.state.balance,
       user_level: this.state.level,
+      user_status: "1",
     };
     const token = sessionStorage.getItem("auth-token");
 
     addUser(user, token)
       .then((res) => {
-        console.log("berhasil");
+        Swal.fire("", "Tambah User", "success");
         this.props.history.push({
           pathname: "/user",
         });
@@ -152,6 +156,17 @@ export default class AddUser extends Component {
                         </select>
                       </div>
                     </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Balance User</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      name="balance"
+                      placeholder="Balance"
+                      onChange={this.handleChange}
+                    />
                   </div>
                 </div>
 

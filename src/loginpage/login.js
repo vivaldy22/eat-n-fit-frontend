@@ -16,14 +16,14 @@ const LoginNew = () => {
   }, []);
 
   const handelLogout = () => {
-    Swal.fire("", "Logoutnu8u", "success");
+    Swal.fire("", "Logout", "success");
     setIsLogin(false);
     sessionStorage.clear();
   };
 
   const onLogin = (token) => {
     setIsLogin(true);
-    console.log(isLogin);
+
     sessionStorage.setItem("auth-token", token);
   };
 

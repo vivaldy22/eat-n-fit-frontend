@@ -1,6 +1,20 @@
 import React, { Component } from "react";
-
+import PropTypes from "prop-types";
+import checkboxes from "../utils/checkbox";
+import Checkbox from "../utils/Checkboxes";
 export default class AddCategory extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+  handleChange(e) {
+    const item = e.target.value;
+
+    const value =
+      e.target.type === "checkbox" ? e.target.checked : e.target.value;
+    console.log(value);
+  }
   render() {
     return (
       <div>
@@ -22,6 +36,23 @@ export default class AddCategory extends Component {
                         id="exampleInputEmail1"
                         name="Paket"
                         placeholder="Nama Kategori"
+                      />
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="customCheck"
+                        name="example1"
+                      />
+                    </div>
+
+                    <div className="row">
+                      <input type="checkbox" value="satu" />
+                    </div>
+                    <div className="row">
+                      <input
+                        type="checkbox"
+                        value="dua"
+                        onChange={this.handleChange}
                       />
                     </div>
                   </div>
