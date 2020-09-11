@@ -1,25 +1,37 @@
 import React, { Component } from "react";
 import ModalImage from "../utils/ModalAKG"
 import Food from "../json/food.json"
-import CardMenu from "./card/CardMenu";
-import { getFood } from "../api/api";
+import CardMenu from "../utils/card/CardMenu";
+import { getFood, getToken } from "../api/api";
 
-class PaketSehatKu extends Component {
+
+class MyHealthyPacket extends Component {
   constructor(props) {
     super(props);
     this.state = {
       listMenu:[],
+      token:"",
     };
   }
 componentDidMount(){
-  this.setState({
-    listMenu:Food.foods_recommend
-  })
-  // getFood().then((res)=>{
-  //   this.setState({
-  //   listMenu:res
-  //   })
+  // this.setState({
+  //   listMenu:Food.foods_recommend
   // })
+  getToken().then((res)=>{
+   sessionStorage.setItem("auth-token", res.token);
+  })
+  const token = sessionStorage.getItem("auth-token");
+
+  getFood(token).then((res)=>{
+    console.log(res)
+    var recommend = {"food_recommend" :[res]} 
+    this.setState({
+    listMenu: res
+    })
+  })
+  console.log("my healthy packet")
+
+  
 }
   render() {
     const menuSehatKu= this.state.listMenu.map((menu,index)=>(
@@ -46,4 +58,4 @@ componentDidMount(){
   }
 }
 
-export default PaketSehatKu;
+export default MyHealthyPacket;

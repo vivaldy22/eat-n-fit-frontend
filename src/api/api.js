@@ -6,22 +6,24 @@ import axios from "axios";
 var BaseUrl = "";
 export const getFood = async (token) => {
     const res = await axios.get(
-      `${BaseUrl}/user/foods`,
+      `${BaseUrl}/foods?page=1&limit=1000&keyword=`,
       {
         headers: { Authorization: `Bearer ${token}` },
       }
     );
-  
     return await res.data;
   };
 
-  // export const getToken = async () => {
-  //   const res = await axios.get(
-  //     `${BaseUrl}/auth/user`,
-  //   );
-  
-  //   return await res.data;
-  // };
+  export const getToken = async() =>{
+    const login = {
+      "user_email": "user@gmail.com",
+      "user_password": "password"
+    }
+    const res = await axios.post(
+      `${BaseUrl}/auth/login`, login
+    );
+    return await res.data;
+  };
 
 export const getPacket = async()=>{
     const res = await axios.get("/paket");

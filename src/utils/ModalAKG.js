@@ -22,7 +22,8 @@ class ModalAKG extends Component {
             <Modal.Title style={{fontFamily:"Lora"}}>Kandungan AKG</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <img src={menu.food_picture} style={{height:"200px", width: "200px", alignContent:"center"}} />
+            <img src={menu.food_picture} class="align-self-center mr-3" style={{height:"200px", width: "200px", alignContent:"center"}} />
+            <h3></h3>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose} style={{backgroundColor:"maroon", fontFamily:"Lora"}}>
@@ -30,6 +31,7 @@ class ModalAKG extends Component {
             </Button>
           </Modal.Footer>
         </Modal>
+        
       </div>
     );
 }

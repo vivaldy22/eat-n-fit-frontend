@@ -6,20 +6,7 @@ import { Link } from "react-router-dom";
 class Footer extends Component {
   render() {
     return (
-      // <div  style={{ background: "black" }} >
-      //  <div className="container">
-      //     <div className="row mt-5">
-      //       <footer>
-      //         <div class="footer-bottom  align-items-center text-center text-lg-left">
-      //           <p style={{color:"white" , fontFamily: "PT Serif"}}>Copyright &copy; 2020</p>
-      //           <p style={{color:"white" , fontFamily: "Lora", fontSize:"20px"}}> Eat & Fit </p>
-      //         </div>
-      //       </footer>
-      //     </div>
-      //   </div>
-      // </div>
-
-    <div>
+   <div>
      <footer class="site-footer">
       <div class="container">
         <div class="row">

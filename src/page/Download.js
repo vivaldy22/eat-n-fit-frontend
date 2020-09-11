@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-class Unduh extends Component {
+class Download extends Component {
     render() {
         return (
         <div>
@@ -28,4 +28,4 @@ class Unduh extends Component {
     }
 }
 
-export default Unduh;
+export default Download;

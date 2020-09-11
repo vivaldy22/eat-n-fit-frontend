@@ -3,6 +3,7 @@ import img from "../assets/images/bg-header.jpg";
 import img2 from "../assets/images/javakitchen.jpg";
 import img3 from "../assets/images/2.jpg"
 import { Carousel } from "react-bootstrap";
+
 class ViewCarol extends Component {
   render() {
     return (
@@ -23,7 +24,7 @@ class ViewCarol extends Component {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block w-100" src={img} alt="Third slide" />
+            <img className="d-block w-100" src={img} alt="Third slide"/>
             <Carousel.Caption>
               <h3 style={{color:"white", fontSize: "50px", fontFamily:"Lora", marginBottom:"120px"}}>Download Aplikasi Eat & Fit Pada Ponsel Anda dan Nikmati Layanannya</h3>
               <p style={{color:"white", fontSize: "20px"}}>

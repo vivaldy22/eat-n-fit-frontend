@@ -4,7 +4,9 @@ import imgOrder2 from "../img/home/how-to-order-2.png"
 import imgOrder3 from "../img/home/how-to-order-3.png"
 import imgOrder4 from "../img/home/how-to-order-4.png"
 import imgOrder5 from "../img/home/how-to-order-5.png"
-class CaraPesan extends Component {
+
+
+class OrderPage extends Component {
     render() {
         return (
 <div>
@@ -50,4 +52,4 @@ class CaraPesan extends Component {
     }
 }
 
-export default CaraPesan;
+export default OrderPage;

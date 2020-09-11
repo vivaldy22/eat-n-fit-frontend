@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import ModalImage from "../../utils/ModalPacket"
+import ModalImage from "../ModalAKG"
+import img1 from "../../img/home/gambar1.jpg"
 
-class CardPacket extends Component {
+class CardMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,17 +20,17 @@ class CardPacket extends Component {
     });
   };
     render() {
-        let {packet} =this.props
+        let {menu} =this.props
         return (
     <div>
       <div class="featured-item" style={{height:"667px"}}>
-        <img class="card-img rounded-0" src={packet.packet_picture} onClick={this.handleShow} alt="" />
+        <img class="card-img rounded-0" src={img1} onClick={this.handleShow} alt="" />
         {/* {console.log(menu.image)} */}
         <div class="item-body">
           <a href="#">
-            <h3>{packet.packet_name}</h3>
+            <h3>{menu.food_name}</h3>
           </a>
-          <p>{packet.desc}</p>
+          <p>{menu.food_desc}</p>
             <div class="d-flex justify-content-between">
               <ul class="rating-star">
                 <li>
@@ -48,18 +49,18 @@ class CardPacket extends Component {
                   <i class="ti-star"></i>
                 </li>
               </ul> 
-            <h3 class="price-tag">Rp.{packet.total_price}</h3>
+            <h3 class="price-tag">Rp.{menu.food_price}</h3>
         </div>
       </div>
     </div>
         <ModalImage 
           show={this.state.show} 
           handleClose={this.handleCancel} 
-          packet={packet}
+          menu={menu}
         />
 </div>
     );
   }
 }
 
-export default CardPacket;
+export default CardMenu;
