@@ -8,35 +8,22 @@ class PaketSehatKu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: false,
-      listMenu:[]
+      listMenu:[],
     };
   }
 componentDidMount(){
   this.setState({
-    listMenu:Food.menu
+    listMenu:Food.foods_recommend
   })
   // getFood().then((res)=>{
   //   this.setState({
-  //   listMenu:res.menu
+  //   listMenu:res
   //   })
   // })
 }
-  handleShow = () => {
-    this.setState({
-      show: true,
-    });
-  };
-  handleCancel = () => {
-    this.setState({
-      show: false,
-    });
-  };
-
   render() {
-
     const menuSehatKu= this.state.listMenu.map((menu,index)=>(
-     <CardMenu image={ menu.food_picture } food_name={menu.food_name} desc={menu.food_desc} price={menu.food_price} handleShow={this.handleShow} cancel={this.handleCancel} show={this.state.show} />
+     <CardMenu menu={menu} style={{alignItem:"center"}} />
     ))
     
     return (
@@ -54,12 +41,6 @@ componentDidMount(){
           </div>
         </section>
    {/* this value send to file ModalAKG */}
-      <ModalImage
-            show={show}
-            handleClose={handleClose}
-            image={image}
-        />
- 
       </div>
     );
   }

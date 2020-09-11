@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Button, Modal } from "react-bootstrap";
 
-class ModalAKG extends Component {
+class ModalPacket extends Component {
     render() { 
     
-      //receive from paketSehatku
-    let { show, handleClose, menu } = this.props;
+      //receive from paketSehatKita
+    let { show, handleClose, packet } = this.props;
     const stylePicture = {
       borderRadius: "100px",
       height: "40px",
@@ -22,7 +22,7 @@ class ModalAKG extends Component {
             <Modal.Title style={{fontFamily:"Lora"}}>Kandungan AKG</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <img src={menu.food_picture} style={{height:"200px", width: "200px", alignContent:"center"}} />
+            <img src={packet.packet_picture} style={{height:"200px", width: "200px", alignContent:"center"}} />
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose} style={{backgroundColor:"maroon", fontFamily:"Lora"}}>
@@ -35,4 +35,4 @@ class ModalAKG extends Component {
 }
 }
 
-export default ModalAKG;
+export default ModalPacket;

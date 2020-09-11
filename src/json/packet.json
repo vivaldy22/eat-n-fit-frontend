@@ -1,11 +1,12 @@
 {
-    "packet_name":"Paket Ulang Tahun",
-    "menu_composition": [
+    
+   "packet_name":"Paket Ulang Tahun",
+    "packet_picture":"../img/home/ulangtahun.jpg",
+    "foods_composition": [
         {
-            "menu_name": "Nasi Ayam Geprek",
             "food_composition": [
                 {
-                    "food_name": "Nasi",
+                    "food_name": "Nasi Putih",
                     "food_portion": "",
                     "food_calories": "",
                     "food_fat": "",
@@ -15,7 +16,87 @@
                     "food_desc": ""
                 },
                 {
-                    "food_name": "Ayam Geprek",
+                    "food_name": "Chicken Cordon Bleu",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                }, 
+                {
+                    "food_name": "Beef Teriyaki",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                }, 
+                {
+                    "food_name": "Chicken Cordon Bleu",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                }, 
+                {
+                    "food_name": "Chicken Cordon Bleu",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Chicken Cordon Bleu",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Chicken Cordon Bleu",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Chicken Cordon Bleu",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Chicken Cordon Bleu",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Chicken Cordon Bleu",
                     "food_portion": "",
                     "food_calories": "",
                     "food_fat": "",
@@ -31,12 +112,15 @@
             "total_protein": "",
             "total_price": "",
             "desc": ""
-        },
+        }
+    ], 
+    "packet_name":"Paket Acara Kantor",
+    "packet_picture":"../img/home/office.jpg",
+    "foods_composition": [
         {
-            "menu_name": "Bubur Cap Kecap",
             "food_composition": [
                 {
-                    "food_name": "Bubur",
+                    "food_name": "Nasi Putih",
                     "food_portion": "",
                     "food_calories": "",
                     "food_fat": "",
@@ -46,7 +130,276 @@
                     "food_desc": ""
                 },
                 {
-                    "food_name": "Kecap",
+                    "food_name": "Kakap Asam Manis",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                }, 
+                {
+                    "food_name": "Udang Goreng Tepung",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                }, 
+                {
+                    "food_name": "Soup Ayam Sosis",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                }, 
+                {
+                    "food_name": "Asinan Jakarta",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Buah Semangka",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Puding",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Kerupuk",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Es Kelapa",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Air Mineral",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                }
+            ],
+            "total_calories": "",
+            "total_fat": "",
+            "total_carbs": "",
+            "total_protein": "",
+            "total_price": "",
+            "desc": ""
+        }
+    ],
+
+    "packet_name":"Paket Aqiqah",
+    "packet_picture":"../img/home/aqiqah.jpg",
+    "foods_composition": [
+        {
+            "food_composition": [
+                {
+                    "food_name": "Nasi Putih",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Kambing Guling",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                }, 
+                {
+                    "food_name": "Sate Kambing",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                }, 
+                {
+                    "food_name": "Gulai Kambing",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                }, 
+                {
+                    "food_name": "Acar",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Mie",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Pisang",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Kerupuk",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Air Mineral",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                }
+            ],
+            "total_calories": "",
+            "total_fat": "",
+            "total_carbs": "",
+            "total_protein": "",
+            "total_price": "",
+            "desc": ""
+        }
+    ], 
+    "packet_name":"Paket Pernikahan",
+    "packet_picture":"../img/home/wedding.jpg",
+    "foods_composition": [
+        {
+            "food_composition": [
+                {
+                    "food_name": "Soup Ayam Jamur",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Capcay",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                }, 
+                {
+                    "food_name": "Nasi Goreng Hongkong",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                }, 
+                {
+                    "food_name": "Kakap Asam Manis",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                }, 
+                {
+                    "food_name": "Nasi Putih",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Soup Buah",
+                    "food_portion": "",
+                    "food_calories": "",
+                    "food_fat": "",
+                    "food_carbs": "",
+                    "food_protein": "",
+                    "food_price": "",
+                    "food_desc": ""
+                },
+                {
+                    "food_name": "Air Mineral",
                     "food_portion": "",
                     "food_calories": "",
                     "food_fat": "",
@@ -64,4 +417,5 @@
             "desc": ""
         }
     ]
+  
 }
