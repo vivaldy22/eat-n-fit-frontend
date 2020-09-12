@@ -79,8 +79,6 @@ export const getFood = async ({ page, limit, keyword }, token) => {
 };
 
 export const addFood = async (food, token) => {
-  console.log(food);
-  console.log(token);
   const res = await axios.post(`${BaseUrl}/admin/foods`, food, {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -89,7 +87,23 @@ export const addFood = async (food, token) => {
 
   return await res.data;
 };
+export const getFoodById = async (id, token) => {
+  const res = await axios.get(`${BaseUrl}/admin/foods/${id}`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
 
+  return await res.data;
+};
+
+export const updateFood = async (idUser, user, token) => {
+  const res = await axios.put(`${BaseUrl}/admin/foods/${idUser}`, user, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  console.log(res);
+  return await res.data;
+};
 export const uploadImage = async (idImage, fileImage, token) => {
   let formData = await new FormData();
   await formData.append("upload-file", fileImage);
@@ -97,6 +111,33 @@ export const uploadImage = async (idImage, fileImage, token) => {
     headers: {
       Authorization: `Bearer ${token}`,
       "Content-Type": "multipart/form-data",
+    },
+  });
+  return await res.data;
+};
+
+export const getPacket = async ({ page, limit, keyword }, token) => {
+  const res = await axios.get(
+    `${BaseUrl}/admin/packets?page=${page}&limit=${limit}&keyword=${keyword}`,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
+  return await res.data;
+};
+export const getDetailPacket = async (idPacket, token) => {
+  const res = await axios.get(`${BaseUrl}/admin/packets/${idPacket}`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  return await res.data;
+};
+
+export const addPacket = async (food, token) => {
+  console.log(food);
+  console.log(token);
+  const res = await axios.post(`${BaseUrl}/admin/foods`, food, {
+    headers: {
+      Authorization: `Bearer ${token}`,
     },
   });
 

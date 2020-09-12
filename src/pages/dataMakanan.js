@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { getMenu, getFood } from "../config/api";
+import { getMenu, getFood, getTotalUser } from "../config/api";
 import loading from "../img/loading.gif";
 import { Modal, Button, Pagination } from "react-bootstrap";
 class DataMakanan extends Component {
@@ -10,8 +10,8 @@ class DataMakanan extends Component {
     this.state = {
       menuList: [],
       page: 1,
-      limit: 2,
-      active: 1,
+      limit: 5,
+      total: 0,
       keyword: "",
 
       isLoading: false,
@@ -19,6 +19,7 @@ class DataMakanan extends Component {
   }
   componentDidMount() {
     this.loadData(this.state.page, this.state.limit, this.state.keyword);
+    this.getTotal();
   }
   loadData = (page, limit, keyword) => {
     var token = sessionStorage.getItem("auth-token");
@@ -28,12 +29,39 @@ class DataMakanan extends Component {
       keyword,
     };
     getFood(paging, token).then((res) => {
-      console.log("data User:", res);
       this.setState({ ...this.state, menuList: res, isLoading: true });
     });
   };
+  getTotal = () => {
+    var token = sessionStorage.getItem("auth-token");
+    getTotalUser(token)
+      .then((res) => {
+        this.setState({ ...this.state, total: res.total_data });
+      })
+      .catch((e) => {});
+  };
 
   render() {
+    let maks = this.state.total / this.state.limit;
+    let items = [];
+    if (this.state.total % this.state.limit != 0) {
+      maks++;
+    }
+
+    for (let number = 1; number <= maks; number++) {
+      items.push(
+        <Pagination.Item
+          key={number}
+          active={number == this.state.page}
+          onClick={() => {
+            this.setState({ ...this.state, isLoading: false });
+            this.loadData(number, this.state.limit, this.state.keyword);
+          }}
+        >
+          {number}
+        </Pagination.Item>
+      );
+    }
     const menu = this.state.menuList.map((list, index) => (
       <tr>
         <td>{index + 1}</td>
@@ -47,19 +75,21 @@ class DataMakanan extends Component {
         <td>{list.food_desc}</td>
         <td>
           <button
-            title="Edit"
-            className="btn btn-success btn-sm"
-            style={{ marginRight: 15 }}
-          >
-            <i class="fas fa-edit" />
-          </button>
-          <button
-            title="Edit"
+            title="Detail"
             className="btn btn-info btn-sm"
             style={{ marginRight: 15 }}
           >
             <i class="fas fa-list" />
           </button>
+          <Link
+            title="Edit"
+            style={{ marginRight: 15 }}
+            to={`/editFood/${list.food_id}`}
+          >
+            <button className="btn btn-success btn-sm">
+              <i class="fas fa-edit" />
+            </button>
+          </Link>
           <button className="btn btn-danger btn-sm">
             <i class="fas fa-trash" />
           </button>
@@ -127,7 +157,34 @@ class DataMakanan extends Component {
                         <img src={loading} style={{ marginLeft: 180 }} />
                       )}
                     </div>
-                    <div className="card-footer d-flex justify-content-end"></div>
+                    <div className="card-footer d-flex justify-content-end">
+                      <Pagination size="sm">
+                        <Pagination.Prev
+                          disabled={this.state.page == 1}
+                          onClick={() => {
+                            this.setState({ ...this.state, isLoading: false });
+
+                            this.loadData(
+                              this.state.page - 1,
+                              this.state.limit,
+                              this.state.keyword
+                            );
+                          }}
+                        />{" "}
+                        {items}
+                        <Pagination.Next
+                          disabled={this.state.page == Math.floor(maks)}
+                          onClick={() => {
+                            this.setState({ ...this.state, isLoading: false });
+                            this.loadData(
+                              this.state.page + 1,
+                              this.state.limit,
+                              this.state.keyword
+                            );
+                          }}
+                        />
+                      </Pagination>
+                    </div>
                   </div>
                 </div>
               </div>

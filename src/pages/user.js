@@ -11,7 +11,7 @@ const DataUser = () => {
   const [isLoading, setLoading] = useState(false);
   const [idUser, setIdUser] = useState("");
   const [page, setPage] = useState("1");
-  const [limit, setLimit] = useState("2");
+  const [limit, setLimit] = useState("10");
   const [keyword, setKeyword] = useState("");
   const [total, setTotal] = useState("");
 
@@ -24,6 +24,9 @@ const DataUser = () => {
     };
     getUser(paging, token).then((res) => {
       setUserList(res);
+
+      setPage(page);
+
       setLoading(true);
     });
   };
@@ -51,7 +54,6 @@ const DataUser = () => {
     getTotalUser(token)
       .then((res) => {
         setTotal(res.total_data);
-        console.log(res);
       })
       .catch((e) => {});
   };
@@ -74,7 +76,6 @@ const DataUser = () => {
         onClick={() => {
           setLoading(false);
           loadData(number, limit, keyword);
-          setPage(number);
         }}
       >
         {number}
@@ -161,7 +162,7 @@ const DataUser = () => {
                             <th>Action</th>
                           </tr>
                         </thead>
-                        <tbody>{user}</tbody>
+                        <tbody>{user} </tbody>
                       </table>
                     ) : (
                       <img src={loading} style={{ marginLeft: 180 }} />
@@ -170,18 +171,18 @@ const DataUser = () => {
                   <div className="card-footer d-flex justify-content-end">
                     <Pagination size="sm">
                       <Pagination.Prev
+                        disabled={page == 1}
                         onClick={() => {
                           setLoading(false);
                           loadData(page - 1, limit, keyword);
-                          setPage(page - 1);
                         }}
                       />{" "}
                       {items}
                       <Pagination.Next
+                        disabled={page == Math.floor(maks)}
                         onClick={() => {
                           setLoading(false);
-                          setPage(page + 1);
-                          loadData(page, limit, keyword);
+                          loadData(Number(page) + 1, limit, keyword);
                         }}
                       />
                     </Pagination>

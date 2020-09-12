@@ -33,7 +33,6 @@ export default class EditUser extends Component {
     var token = sessionStorage.getItem("auth-token");
     getUserById(id, token)
       .then((res) => {
-        console.log(res.user_email);
         this.setState({
           ...this.state,
           user_id: res.user_id,
@@ -71,7 +70,7 @@ export default class EditUser extends Component {
         });
       })
       .catch((e) => {
-        console.log(e);
+        Swal.fire("", "Edit User", "failed");
       });
   };
 
@@ -157,19 +156,6 @@ export default class EditUser extends Component {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-6">
-                      <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input
-                          type="password"
-                          class="form-control"
-                          id="exampleInputPassword1"
-                          name="password"
-                          placeholder="password"
-                          onChange={this.handleChange}
-                        />
-                      </div>
-                    </div>
                     <div className="col-6">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Level User</label>
