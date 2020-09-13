@@ -2,11 +2,14 @@ import React, { Component } from "react";
 import axios from "axios";
 
 var BaseUrl = "";
+
+//Api Auth token
 export const authLogin = async (Login) => {
   const res = await axios.post(`${BaseUrl}/auth/login`, Login);
   return await res.data;
 };
 
+// API User
 export const getUser = async ({ page, limit, keyword }, token) => {
   const res = await axios.get(
     `${BaseUrl}/admin/users?page=${page}&limit=${limit}&keyword=${keyword}`,
@@ -59,6 +62,7 @@ export const deleteUser = async (idUser, token) => {
   return await res.data;
 };
 
+// API Level
 export const getLevel = async (token) => {
   const res = await axios.get(`${BaseUrl}/admin/levels`, {
     headers: { Authorization: `Bearer ${token}` },
@@ -67,6 +71,7 @@ export const getLevel = async (token) => {
   return await res.data;
 };
 
+// API Food
 export const getFood = async ({ page, limit, keyword }, token) => {
   const res = await axios.get(
     `${BaseUrl}/admin/foods?page=${page}&limit=${limit}&keyword=${keyword}`,
@@ -104,6 +109,8 @@ export const updateFood = async (idUser, user, token) => {
   console.log(res);
   return await res.data;
 };
+
+//API upload image
 export const uploadImage = async (idImage, fileImage, token) => {
   let formData = await new FormData();
   await formData.append("upload-file", fileImage);
@@ -116,6 +123,7 @@ export const uploadImage = async (idImage, fileImage, token) => {
   return await res.data;
 };
 
+// API Packet
 export const getPacket = async ({ page, limit, keyword }, token) => {
   const res = await axios.get(
     `${BaseUrl}/admin/packets?page=${page}&limit=${limit}&keyword=${keyword}`,
@@ -132,13 +140,19 @@ export const getDetailPacket = async (idPacket, token) => {
   return await res.data;
 };
 
-export const addPacket = async (food, token) => {
-  console.log(food);
-  console.log(token);
-  const res = await axios.post(`${BaseUrl}/admin/foods`, food, {
+export const addPacket = async (packet, token) => {
+  const res = await axios.post(`${BaseUrl}/admin/packets`, packet, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
+  });
+
+  return await res.data;
+};
+
+export const getPacketById = async (id, token) => {
+  const res = await axios.get(`${BaseUrl}/admin/packets/${id}`, {
+    headers: { Authorization: `Bearer ${token}` },
   });
 
   return await res.data;

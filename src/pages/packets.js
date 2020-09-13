@@ -70,7 +70,7 @@ class Packets extends Component {
           <Link
             title="Edit"
             style={{ marginRight: 15 }}
-            // to={`/editFood/${list.food_id}`}
+            to={`/editPackets/${list.packet_id}`}
           >
             <button className="btn btn-success btn-sm">
               <i class="fas fa-edit" />
@@ -112,7 +112,7 @@ class Packets extends Component {
                     <div class="card-header">
                       <h3 class="card-title">Daftar Paket</h3>
                       <div className="d-flex flex-row-reverse">
-                        <Link className="brand-link" to="/addCategory">
+                        <Link className="brand-link" to="/addPackets">
                           <button className="btn btn-primary">Tambah</button>
                         </Link>
                       </div>

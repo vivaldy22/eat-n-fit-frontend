@@ -86,26 +86,16 @@ export default class AddFood extends Component {
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputPassword1">Nama Menu</label>
-                    {this.state.isLoading ? (
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="exampleInputPassword1"
-                        name="foodName"
-                        disabled
-                        placeholder="Nama Menu"
-                        onChange={this.handleChange}
-                      />
-                    ) : (
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="exampleInputPassword1"
-                        name="foodName"
-                        placeholder="Nama Menu"
-                        onChange={this.handleChange}
-                      />
-                    )}
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      name="foodName"
+                      disabled={this.state.isLoading}
+                      placeholder="Nama Menu"
+                      onChange={this.handleChange}
+                    />
                   </div>
 
                   <label for="exampleInputPassword1">AKG Makanan</label>
@@ -113,51 +103,31 @@ export default class AddFood extends Component {
                     <div className="col-6">
                       <div class="form-group">
                         <label for="exampleInputPassword1">Protein</label>
-                        {this.state.isLoading ? (
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputPassword1"
-                            name="foodProtein"
-                            placeholder="Protein"
-                            disabled
-                            onChange={this.handleChange}
-                          />
-                        ) : (
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputPassword1"
-                            name="foodProtein"
-                            placeholder="Protein"
-                            onChange={this.handleChange}
-                          />
-                        )}
+
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                          name="foodProtein"
+                          placeholder="Protein"
+                          disabled={this.state.isLoading}
+                          onChange={this.handleChange}
+                        />
                       </div>
                     </div>
                     <div className="col-6">
                       <div class="form-group">
                         <label for="exampleInputPassword1">Karbohidrat</label>
-                        {this.state.isLoading ? (
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputPassword1"
-                            name="foodCarbs"
-                            placeholder="Karbohidrat"
-                            disabled
-                            onChange={this.handleChange}
-                          />
-                        ) : (
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputPassword1"
-                            name="foodCarbs"
-                            placeholder="Karbohidrat"
-                            onChange={this.handleChange}
-                          />
-                        )}
+
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                          name="foodCarbs"
+                          placeholder="Karbohidrat"
+                          disabled={this.state.isLoading}
+                          onChange={this.handleChange}
+                        />
                       </div>
                     </div>
                   </div>
@@ -166,126 +136,77 @@ export default class AddFood extends Component {
                     <div className="col-6">
                       <div class="form-group">
                         <label for="exampleInputPassword1">Lemak</label>
-                        {this.state.isLoading ? (
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputPassword1"
-                            name="foodFat"
-                            placeholder="Lemak"
-                            disabled
-                            onChange={this.handleChange}
-                          />
-                        ) : (
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputPassword1"
-                            name="foodFat"
-                            placeholder="Lemak"
-                            onChange={this.handleChange}
-                          />
-                        )}
+
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                          name="foodFat"
+                          placeholder="Lemak"
+                          disabled={this.state.isLoading}
+                          onChange={this.handleChange}
+                        />
                       </div>
                     </div>
                     <div className="col-6">
                       <div class="form-group">
                         <label for="exampleInputPassword1">kalori</label>
-                        {this.state.isLoading ? (
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputPassword1"
-                            name="foodCalories"
-                            placeholder="kalori"
-                            disabled
-                            onChange={this.handleChange}
-                          />
-                        ) : (
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputPassword1"
-                            name="foodCalories"
-                            placeholder="kalori"
-                            onChange={this.handleChange}
-                          />
-                        )}
+
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                          name="foodCalories"
+                          placeholder="kalori"
+                          disabled={this.state.isLoading}
+                          onChange={this.handleChange}
+                        />
                       </div>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="exampleInputPassword1">Deskripsi Menu</label>
-                    {this.state.isLoading ? (
-                      <textarea
-                        class="form-control"
-                        rows="3"
-                        placeholder="Deskripsi Menu"
-                        name="foodDesc"
-                        disabled
-                        onChange={this.handleChange}
-                      ></textarea>
-                    ) : (
-                      <textarea
-                        class="form-control"
-                        rows="3"
-                        placeholder="Deskripsi Menu"
-                        name="foodDesc"
-                        onChange={this.handleChange}
-                      ></textarea>
-                    )}
+
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Deskripsi Menu"
+                      name="foodDesc"
+                      disabled={this.state.isLoading}
+                      onChange={this.handleChange}
+                    ></textarea>
                   </div>
 
                   <div className="row">
                     <div className="col-6">
                       <div class="form-group">
                         <label for="exampleInputPassword1">Harga Menu</label>
-                        {this.state.isLoading ? (
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputPassword1"
-                            name="foodPrice"
-                            placeholder="Harga Menu"
-                            disabled
-                            onChange={this.handleChange}
-                          />
-                        ) : (
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputPassword1"
-                            name="foodPrice"
-                            placeholder="Harga Menu"
-                            onChange={this.handleChange}
-                          />
-                        )}
+
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                          name="foodPrice"
+                          placeholder="Harga Menu"
+                          disabled={this.state.isLoading}
+                          onChange={this.handleChange}
+                        />
                       </div>
                     </div>
                     <div className="col-6">
                       <div class="form-group">
                         <label for="exampleInputPassword1">Porsi Menu</label>
-                        {this.state.isLoading ? (
-                          <input
-                            type="number"
-                            class="form-control"
-                            id="exampleInputPassword1"
-                            name="foodPortion"
-                            placeholder="Porsi Menu"
-                            disabled
-                            onChange={this.handleChange}
-                          />
-                        ) : (
-                          <input
-                            type="number"
-                            class="form-control"
-                            id="exampleInputPassword1"
-                            name="foodPortion"
-                            placeholder="Porsi Menu"
-                            onChange={this.handleChange}
-                          />
-                        )}
+
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                          name="foodPortion"
+                          placeholder="Porsi Menu"
+                          disabled={this.state.isLoading}
+                          onChange={this.handleChange}
+                        />
                       </div>
                     </div>
                   </div>
@@ -297,24 +218,15 @@ export default class AddFood extends Component {
                         <label class="custom-file-label" for="exampleInputFile">
                           {this.state.imageFood.name || "choose file"}
                         </label>
-                        {this.state.isLoading ? (
-                          <input
-                            type="file"
-                            name="imageFood"
-                            class="custom-file-input"
-                            id="exampleInputFile"
-                            disabled
-                            onChange={this.handleChangeFile}
-                          />
-                        ) : (
-                          <input
-                            type="file"
-                            name="imageFood"
-                            class="custom-file-input"
-                            id="exampleInputFile"
-                            onChange={this.handleChangeFile}
-                          />
-                        )}
+
+                        <input
+                          type="file"
+                          name="imageFood"
+                          class="custom-file-input"
+                          id="exampleInputFile"
+                          disabled={this.state.isLoading}
+                          onChange={this.handleChangeFile}
+                        />
                       </div>
                     </div>
                   </div>

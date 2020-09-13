@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getLevel, addUser } from "../../config/api";
 import Swal from "sweetalert2";
+import loading from "../../img/loading3.gif";
 export default class AddUser extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +15,6 @@ export default class AddUser extends Component {
       password: "",
       balance: "",
       isLoading: false,
-      disable: false,
       levels: [],
     };
   }
@@ -24,12 +24,12 @@ export default class AddUser extends Component {
   loadData = () => {
     var token = sessionStorage.getItem("auth-token");
     getLevel(token).then((res) => {
-      this.setState({ ...this.state, levels: res, isLoading: true });
+      this.setState({ ...this.state, levels: res });
     });
   };
 
   handleSubmit = () => {
-    this.setState({ ...this.state, disable: true });
+    this.setState({ ...this.state, isLoading: true });
     const user = {
       user_email: this.state.email,
       user_password: this.state.password,
@@ -85,6 +85,7 @@ export default class AddUser extends Component {
                           id="Nama_Depan"
                           name="firstName"
                           placeholder="Nama Depan"
+                          disabled={this.state.isLoading}
                           onChange={this.handleChange}
                         />
                       </div>
@@ -98,6 +99,7 @@ export default class AddUser extends Component {
                           id="Nama_Belakang"
                           name="lastName"
                           placeholder="Nama Belakang"
+                          disabled={this.state.isLoading}
                           onChange={this.handleChange}
                         />
                       </div>
@@ -113,6 +115,7 @@ export default class AddUser extends Component {
                           id="exampleInputPassword1"
                           name="email"
                           placeholder="email"
+                          disabled={this.state.isLoading}
                           onChange={this.handleChange}
                         />
                       </div>
@@ -123,6 +126,7 @@ export default class AddUser extends Component {
                         <select
                           class="form-control"
                           name="gender"
+                          disabled={this.state.isLoading}
                           onChange={this.handleChange}
                         >
                           <option>--Gender--</option>
@@ -142,6 +146,7 @@ export default class AddUser extends Component {
                           id="exampleInputPassword1"
                           name="password"
                           placeholder="password"
+                          disabled={this.state.isLoading}
                           onChange={this.handleChange}
                         />
                       </div>
@@ -150,6 +155,7 @@ export default class AddUser extends Component {
                       <div class="form-group">
                         <label for="exampleInputEmail1">Level User</label>
                         <select
+                          disabled={this.state.isLoading}
                           class="form-control"
                           name="level"
                           onChange={this.handleChange}
@@ -169,25 +175,22 @@ export default class AddUser extends Component {
                       id="exampleInputPassword1"
                       name="balance"
                       placeholder="Balance"
+                      disabled={this.state.isLoading}
                       onChange={this.handleChange}
                     />
                   </div>
                 </div>
 
-                <div class="card-footer d-flex  justify-content-center">
-                  {this.state.disable ? (
-                    <button
-                      type="submit"
-                      class="btn btn-primary"
-                      onClick={this.handleSubmit}
-                      disabled
-                    >
-                      Submit
-                    </button>
+                <div
+                  class="card-footer d-flex  justify-content-center"
+                  style={{ background: "#add6f7ff" }}
+                >
+                  {this.state.isLoading ? (
+                    <img src={loading} style={{ height: 50, width: 50 }} />
                   ) : (
                     <button
                       type="submit"
-                      class="btn btn-primary"
+                      class="btn btn-primary "
                       onClick={this.handleSubmit}
                     >
                       Submit
