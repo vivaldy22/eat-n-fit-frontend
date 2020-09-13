@@ -1,19 +1,21 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { getMenu, getFood, getTotalUser } from "../config/api";
+import { getMenu, getFood, getTotalUser, getFoodById } from "../config/api";
 import loading from "../img/loading.gif";
 import { Modal, Button, Pagination } from "react-bootstrap";
+import DetailMakanan from "../utils/detailMakanan";
 class DataMakanan extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       menuList: [],
+      detailFood: [],
       page: 1,
       limit: 5,
       total: 0,
       keyword: "",
-
+      show: false,
       isLoading: false,
     };
   }
@@ -32,6 +34,23 @@ class DataMakanan extends Component {
       this.setState({ ...this.state, menuList: res, isLoading: true });
     });
   };
+  detailFood = (id) => {
+    var token = sessionStorage.getItem("auth-token");
+    getFoodById(id, token)
+      .then((res) => {
+        console.log(res);
+        this.setState({
+          detailFood: res,
+          show: true,
+        });
+      })
+      .catch((e) => {});
+  };
+
+  handleClose = () => {
+    this.setState({ ...this.state, show: false });
+  };
+
   getTotal = () => {
     var token = sessionStorage.getItem("auth-token");
     getTotalUser(token)
@@ -78,6 +97,9 @@ class DataMakanan extends Component {
             title="Detail"
             className="btn btn-info btn-sm"
             style={{ marginRight: 15 }}
+            onClick={() => {
+              this.detailFood(list.food_id);
+            }}
           >
             <i class="fas fa-list" />
           </button>
@@ -190,6 +212,11 @@ class DataMakanan extends Component {
               </div>
             </div>
           </section>
+          <DetailMakanan
+            show={this.state.show}
+            handleClose={this.handleClose}
+            detail={this.state.detailFood}
+          />
         </div>
       </div>
     );

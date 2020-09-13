@@ -159,6 +159,15 @@ export const updatePacket = async (idPacket, packet, token) => {
 
   return await res.data;
 };
+export const deletePacket = async (idPacket, token) => {
+  const res = await axios.delete(`${BaseUrl}/admin/packets/${idPacket}`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  return await res.data;
+};
 export const getPacketById = async (id, token) => {
   const res = await axios.get(`${BaseUrl}/admin/packets/${id}`, {
     headers: { Authorization: `Bearer ${token}` },
