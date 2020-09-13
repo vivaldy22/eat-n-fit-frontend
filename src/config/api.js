@@ -150,6 +150,15 @@ export const addPacket = async (packet, token) => {
   return await res.data;
 };
 
+export const updatePacket = async (idPacket, packet, token) => {
+  const res = await axios.put(`${BaseUrl}/admin/packets/${idPacket}`, packet, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  return await res.data;
+};
 export const getPacketById = async (id, token) => {
   const res = await axios.get(`${BaseUrl}/admin/packets/${id}`, {
     headers: { Authorization: `Bearer ${token}` },

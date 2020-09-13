@@ -41,5 +41,5 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.4"
   },
-  "proxy": "http://2de68d926956.ngrok.io"
+  "proxy": "http://4c0c492e0018.ngrok.io"
 }

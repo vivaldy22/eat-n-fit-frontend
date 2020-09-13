@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { getPacket, getDetailPacket } from "../config/api";
 import ModalPacket from "../utils/modalPacket";
-
+import loading from "../img/loading.gif";
 class Packets extends Component {
   constructor(props) {
     super(props);
@@ -84,6 +84,7 @@ class Packets extends Component {
     ));
     return (
       <div>
+        {console.log(this.state.detailListFood)}
         <div class="content-wrapper">
           <section class="content-header">
             <div class="container-fluid">
@@ -119,21 +120,25 @@ class Packets extends Component {
                     </div>
 
                     <div class="card-body">
-                      <table
-                        id="example2"
-                        class="table table-bordered table-hover"
-                      >
-                        <thead>
-                          <tr>
-                            <th>No</th>
-                            <th>Name</th>
-                            <th>Harga</th>
-                            <th>Deskripsi</th>
-                            <th>Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>{packet}</tbody>
-                      </table>
+                      {this.state.isLoading ? (
+                        <table
+                          id="example2"
+                          class="table table-bordered table-hover"
+                        >
+                          <thead>
+                            <tr>
+                              <th>No</th>
+                              <th>Name</th>
+                              <th>Harga</th>
+                              <th>Deskripsi</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>{packet}</tbody>
+                        </table>
+                      ) : (
+                        <img src={loading} style={{ marginLeft: 180 }} />
+                      )}
                     </div>
                   </div>
                 </div>

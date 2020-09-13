@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import checkboxes from "../../utils/checkbox";
 import Checkbox from "../../utils/Checkboxes";
-import { getFood, addPacket, getPacketById } from "../../config/api";
+import { getFood, updatePacket, getPacketById } from "../../config/api";
 import Swal from "sweetalert2";
 import loading from "../../img/loading3.gif";
 export default class EditPacket extends Component {
@@ -13,6 +13,7 @@ export default class EditPacket extends Component {
       listFood: [],
       foodItem: [],
       listFoodByID: [],
+      idPacket: "",
       namaPaket: "",
       hargaPaket: "",
       descPaket: "",
@@ -20,6 +21,7 @@ export default class EditPacket extends Component {
       limit: 100,
       keyword: "",
       isLoading: false,
+      isCheked: false,
     };
   }
 
@@ -54,6 +56,7 @@ export default class EditPacket extends Component {
         this.setState({
           ...this.state,
           listFoodByID: res.list_food,
+          idPacket: res.packet.packet_id,
           namaPaket: res.packet.packet_name,
           hargaPaket: res.packet.packet_price,
           descPaket: res.packet.packet_desc,
@@ -62,7 +65,7 @@ export default class EditPacket extends Component {
           this.state.foodItem.push(items.food_id);
         }
         this.setState({
-          isLoading: true,
+          isCheked: true,
         });
       })
       .catch((e) => {});
@@ -84,14 +87,15 @@ export default class EditPacket extends Component {
       packet_desc: this.state.descPaket,
     };
     const token = sessionStorage.getItem("auth-token");
-
+    console.log(this.state.foodItem);
     const inputPacket = {
       packet: paket,
       list_food: this.state.foodItem,
     };
-    addPacket(inputPacket, token)
+    var idPacket = this.state.idPacket;
+    updatePacket(idPacket, inputPacket, token)
       .then((res) => {
-        Swal.fire("", "Tambah paket", "success");
+        Swal.fire("", "Edit paket", "success");
         this.props.history.push({
           pathname: "/packets",
         });
@@ -123,11 +127,9 @@ export default class EditPacket extends Component {
 
   checkFood = (id) => {
     var foods = this.state.foodItem;
-    console.log(foods);
+
     for (let index = 0; index < foods.length; index++) {
       const element = foods[index];
-      console.log(`ini element ${element}`);
-      console.log(`ini id ${id}`);
       if (element == id) {
         return true;
       }
@@ -145,8 +147,8 @@ export default class EditPacket extends Component {
               type="checkbox"
               name={foods.food_name}
               value={foods.food_id}
-              defaultChecked={this.checkFood(foods.food_id)}
-              //   checked={this.checkFood(foods.food_id)}
+              //defaultChecked={this.checkFood(foods.food_id)}
+              checked={this.checkFood(foods.food_id)}
               onChange={this.handleCheckBox}
               disabled={this.state.isLoading}
             />
@@ -163,7 +165,7 @@ export default class EditPacket extends Component {
             <div class="row mt-3 d-flex justify-content-center">
               <div class="card card-primary ">
                 <div class="card-header">
-                  <h3 class="card-title">Tambah Paket</h3>
+                  <h3 class="card-title">Edit Paket</h3>
                 </div>
 
                 <div class="card-body">
