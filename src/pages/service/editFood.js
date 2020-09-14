@@ -123,7 +123,6 @@ export default class EditFood extends Component {
     const imageUrl = (
       <img
         src={`${BaseUrl}/images/${this.state.foodId}.jpg`}
-        onError={(this.src = `${BaseUrl}/images/${this.state.foodId}.jpg`)}
         style={{ height: 50, width: 50, marginTop: 10 }}
       />
     );

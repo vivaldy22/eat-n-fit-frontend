@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { getMenu, getFood, getTotalUser, getFoodById } from "../config/api";
+import {
+  deleteFoodById,
+  getFood,
+  getTotalUser,
+  getFoodById,
+} from "../config/api";
 import loading from "../img/loading.gif";
 import { Modal, Button, Pagination } from "react-bootstrap";
 import DetailMakanan from "../utils/detailMakanan";
+import Swal from "sweetalert2";
 class DataMakanan extends Component {
   constructor(props) {
     super(props);
@@ -11,11 +17,13 @@ class DataMakanan extends Component {
     this.state = {
       menuList: [],
       detailFood: [],
+      idFood: "",
       page: 1,
       limit: 5,
       total: 0,
       keyword: "",
       show: false,
+      delete: false,
       isLoading: false,
     };
   }
@@ -46,11 +54,26 @@ class DataMakanan extends Component {
       })
       .catch((e) => {});
   };
-
-  handleClose = () => {
-    this.setState({ ...this.state, show: false });
+  deleteFood = () => {
+    var token = sessionStorage.getItem("auth-token");
+    deleteFoodById(this.state.idFood, token)
+      .then((res) => {
+        Swal.fire("", "Hapus Makanan", "success");
+        this.setState({ ...this.state, delete: false });
+        this.loadData(this.state.page, this.state.limit, this.state.keyword);
+      })
+      .catch((e) => {});
+  };
+  deleteModal = (id) => {
+    this.setState({
+      delete: true,
+      idFood: id,
+    });
   };
 
+  handleClose = () => {
+    this.setState({ ...this.state, show: false, delete: false });
+  };
   getTotal = () => {
     var token = sessionStorage.getItem("auth-token");
     getTotalUser(token)
@@ -81,43 +104,51 @@ class DataMakanan extends Component {
         </Pagination.Item>
       );
     }
-    const menu = this.state.menuList.map((list, index) => (
-      <tr>
-        <td>{index + 1}</td>
-        <td>{list.food_name}</td>
-        <td>{list.food_calories}</td>
-        <td>{list.food_fat}</td>
-        <td>{list.food_carbs}</td>
-        <td>{list.food_protein}</td>
-        <td>{list.food_portion}</td>
-        <td>{list.food_price}</td>
-        <td>{list.food_desc}</td>
-        <td>
-          <button
-            title="Detail"
-            className="btn btn-info btn-sm"
-            style={{ marginRight: 15 }}
-            onClick={() => {
-              this.detailFood(list.food_id);
-            }}
-          >
-            <i class="fas fa-list" />
-          </button>
-          <Link
-            title="Edit"
-            style={{ marginRight: 15 }}
-            to={`/editFood/${list.food_id}`}
-          >
-            <button className="btn btn-success btn-sm">
-              <i class="fas fa-edit" />
+    var menu = "";
+
+    if (this.state.menuList == null) {
+      menu = "Data Not Found";
+    } else {
+      menu = this.state.menuList.map((list, index) => (
+        <tr>
+          <td>{index + 1}</td>
+          <td>{list.food_name}</td>
+          <td>{list.food_portion}</td>
+          <td>{list.food_price}</td>
+          <td>{list.food_desc}</td>
+          <td>
+            <button
+              title="Detail"
+              className="btn btn-info btn-sm"
+              style={{ marginRight: 15 }}
+              onClick={() => {
+                this.detailFood(list.food_id);
+              }}
+            >
+              <i class="fas fa-list" />
             </button>
-          </Link>
-          <button className="btn btn-danger btn-sm">
-            <i class="fas fa-trash" />
-          </button>
-        </td>
-      </tr>
-    ));
+            <Link
+              title="Edit"
+              style={{ marginRight: 15 }}
+              to={`/editFood/${list.food_id}`}
+            >
+              <button className="btn btn-success btn-sm">
+                <i class="fas fa-edit" />
+              </button>
+            </Link>
+            <button
+              className="btn btn-danger btn-sm"
+              onClick={() => {
+                this.deleteModal(list.food_id);
+              }}
+            >
+              <i class="fas fa-trash" />
+            </button>
+          </td>
+        </tr>
+      ));
+    }
+
     return (
       <div>
         <div class="content-wrapper">
@@ -163,10 +194,6 @@ class DataMakanan extends Component {
                             <tr>
                               <th>No</th>
                               <th>Name</th>
-                              <th>kalori</th>
-                              <th>lemak</th>
-                              <th>karbonhidrat</th>
-                              <th>protein</th>
                               <th>porsi</th>
                               <th>harga</th>
                               <th>deskripsi</th>
@@ -217,6 +244,20 @@ class DataMakanan extends Component {
             handleClose={this.handleClose}
             detail={this.state.detailFood}
           />
+          <Modal show={this.state.delete} onHide={this.handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Delete User</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Apakah Ingin Menghapus Makanan Ini ?</Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={this.handleClose}>
+                Close
+              </Button>
+              <Button variant="danger" onClick={this.deleteFood}>
+                Delete
+              </Button>
+            </Modal.Footer>
+          </Modal>
         </div>
       </div>
     );

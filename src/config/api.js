@@ -99,6 +99,13 @@ export const getFoodById = async (id, token) => {
 
   return await res.data;
 };
+export const deleteFoodById = async (id, token) => {
+  const res = await axios.delete(`${BaseUrl}/admin/foods/${id}`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+  return await res.data;
+};
 
 export const updateFood = async (idUser, user, token) => {
   const res = await axios.put(`${BaseUrl}/admin/foods/${idUser}`, user, {
