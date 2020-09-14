@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Modal, Button } from "react-bootstrap";
+import { BaseUrl } from "./const";
 export default class DetailMakanan extends Component {
   render() {
     let { show, handleClose, detail } = this.props;
@@ -55,7 +56,12 @@ export default class DetailMakanan extends Component {
               </div>
             </div>
             <div className="row d-flex justify-content-center">
-              <img />
+              <div className="col">
+                <img
+                  src={`${BaseUrl}/images/${detail.food_id}.jpg`}
+                  style={{ width: "100%", marginTop: 10 }}
+                />
+              </div>
             </div>
           </Modal.Body>
           <Modal.Footer>

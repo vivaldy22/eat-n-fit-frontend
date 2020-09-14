@@ -39,7 +39,11 @@ class DataMakanan extends Component {
       keyword,
     };
     getFood(paging, token).then((res) => {
-      this.setState({ ...this.state, menuList: res, isLoading: true });
+      if (res.code != 200) {
+        this.setState({ ...this.state, menuList: res, isLoading: true });
+      } else {
+        Swal.fire("", `Gagal Load data ${res.code}`, "error");
+      }
     });
   };
   detailFood = (id) => {

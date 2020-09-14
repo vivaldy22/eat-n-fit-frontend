@@ -79,6 +79,7 @@ export const getFood = async ({ page, limit, keyword }, token) => {
       headers: { Authorization: `Bearer ${token}` },
     }
   );
+  console.log(res);
 
   return await res.data;
 };
