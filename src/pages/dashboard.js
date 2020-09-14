@@ -29,7 +29,7 @@ class Dashboard extends Component {
 
                     <div class="info-box-content">
                       <span class="info-box-text">Menu</span>
-                      <span class="info-box-number">1,410</span>
+                      <span class="info-box-number">10</span>
                     </div>
                   </div>
                 </div>
@@ -42,7 +42,7 @@ class Dashboard extends Component {
 
                     <div class="info-box-content">
                       <span class="info-box-text">Paket</span>
-                      <span class="info-box-number">410</span>
+                      <span class="info-box-number">4</span>
                     </div>
                   </div>
                 </div>
@@ -55,20 +55,7 @@ class Dashboard extends Component {
 
                     <div class="info-box-content">
                       <span class="info-box-text">Order</span>
-                      <span class="info-box-number">13,648</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-12">
-                  <div class="info-box">
-                    <span class="info-box-icon bg-danger">
-                      <i class="far fa-star"></i>
-                    </span>
-
-                    <div class="info-box-content">
-                      <span class="info-box-text">Likes</span>
-                      <span class="info-box-number">93,139</span>
+                      <span class="info-box-number">100</span>
                     </div>
                   </div>
                 </div>
