@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-var BaseUrl = "http://4c0c492e0018.ngrok.io";
+var BaseUrl = "";
 
 //Api Auth token
 export const authLogin = async (Login) => {

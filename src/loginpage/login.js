@@ -33,6 +33,7 @@ const LoginNew = () => {
     };
     authLogin(Login)
       .then((res) => {
+        console.log(res.user.user_level);
         if (res.user.user_level == 1) {
           Swal.fire("", "berhasil login", "success");
           onLogin(res.token);

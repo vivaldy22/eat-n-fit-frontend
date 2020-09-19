@@ -40,5 +40,6 @@
   "devDependencies": {
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.4"
-  }
+  },
+  "proxy": "https://f3f4cf02f48d.ngrok.io"
 }
