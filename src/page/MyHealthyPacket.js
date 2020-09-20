@@ -30,12 +30,6 @@ class MyHealthyPacket extends Component {
 		// }).catch(e=>console.log(e))
 		// console.log("my healthy packet")
 	}
-	
-	componentDidUpdate(prevProps, prevState, snapshot) {
-		this.setState({
-			listMenu: this.props.foods
-		})
-	}
 
 // render() {
 //   const menuSehatKu = this.state.listMenu.map((menu,index)=>(
