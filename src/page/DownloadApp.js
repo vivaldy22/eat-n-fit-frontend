@@ -19,9 +19,7 @@ class DownloadApp extends Component {
                     </h1>
                   </div>
                   <div className="download-qr-container">
-                    {/* eslint-disable-next-line */}
                     <img className="download-playstore" src={imgGoogle} />
-                    {/* eslint-disable-next-line */}
                     <img className="download-qr" src={qrCode} />
                   </div>
                 </div>

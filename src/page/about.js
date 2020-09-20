@@ -31,8 +31,7 @@ class About extends Component {
                 <p style={{ color:"maroon" , fontFamily: "PT Serif", fontSize:"20px"}}>
                   Eat & Fit penyedia jasa makanan sehat dengan varian menu yang
                   lezat dan kandungan gizi yang diukur oleh Nutrisionist terbaik
-                  berdasarkan takaran angka kecukupan gizi yang diberikan khusus
-                  untuk konsumen .
+                  berdasarkan takaran angka kecukupan gizi yang diberikan khusus untuk pelanggan.
                 </p>
               </div>
             </div>
