@@ -26,14 +26,14 @@ class ModalPacket extends Component {
     
       //receive from paketSehatKita
     let { show, handleClose, packet } = this.props;
-    const stylePicture = {
-      borderRadius: "100px",
-      height: "40px",
-      width: "40px",
-    };
-    const styleImage = {
-      marginTop: "10px",
-    };
+    // const stylePicture = {
+    //   borderRadius: "100px",
+    //   height: "40px",
+    //   width: "40px",
+    // };
+    // const styleImage = {
+    //   marginTop: "10px",
+    // };
     const myPacket = packet.food_composition.map((packet,index)=>(
     <div>
       {packet.food_name}
@@ -48,8 +48,8 @@ class ModalPacket extends Component {
               Daftar Makanan
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body class="align-self-center mr-3" > 
-            <img src={packet.packet_picture} class="align-self-center" style={{height:"200px", width: "200px"}} />
+          <Modal.Body className="align-self-center mr-3" > 
+            <img alt="packetPicture" src={packet.packet_picture} className="align-self-center" style={{height:"200px", width: "200px"}} />
           </Modal.Body>
           <Modal.Body >
            <h4 style={{fontFamily:"PT Serif"}}>
@@ -60,7 +60,7 @@ class ModalPacket extends Component {
             <Button variant="secondary" onClick={handleClose} style={{backgroundColor:"maroon"}}>
               Close 
             </Button>
-            <a data-toggle="modal"  onClick={this.handleShowModal2} class="btn btn-primary" style={{color:"white", }}>lihat total AKG</a>
+            <a data-toggle="modal"  onClick={this.handleShowModal2} className="btn btn-primary" style={{color:"white", }}>lihat total AKG</a>
           </Modal.Footer>
         </Modal>  
       </div>
@@ -68,7 +68,7 @@ class ModalPacket extends Component {
       <div>
         <Modal show={this.state.showModal2}>
           <Modal.Header closeButton onClick={this.handleCloseModal2} style={{backgroundColor:"#808000"}}>
-            <Modal.Title class="align-self-center mr-3" style={{fontFamily:"Lora", fontSize:"20px", color:"white", backgroundColor:"#808000"}}>Takaran AKG dalam 1 paket</Modal.Title>
+            <Modal.Title className="align-self-center mr-3" style={{fontFamily:"Lora", fontSize:"20px", color:"white", backgroundColor:"#808000"}}>Takaran AKG dalam 1 paket</Modal.Title>
           </Modal.Header>
           <Modal.Body style={{fontFamily:"Lora", backgroundColor: "#fcad10"}} > 
           <div >

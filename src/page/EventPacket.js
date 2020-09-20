@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Packet from "../json/packet.json"
+// import Packet from "../json/packet.json"
 import CardPacket from "../utils/card/CardPacket";
 
 
@@ -12,7 +12,8 @@ class EventPacket extends Component {
   }
   componentDidMount(){
     this.setState({
-      listPacket:Packet.packet
+      // listPacket:Packet.packet
+      listPacket: this.props.packets
     })
     // getPacket().then((res)=>{
     //   this.setState({

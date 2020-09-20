@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ModalImage from "../ModalAKG"
-import img1 from "../../img/home/gambar1.jpg"
 
 class CardMenu extends Component {
   constructor(props) {

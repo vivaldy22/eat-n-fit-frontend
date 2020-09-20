@@ -6,14 +6,14 @@ class ModalAKG extends Component {
     
       //receive from paketSehatku
     let { show, handleClose, menu } = this.props;
-    const stylePicture = {
-      borderRadius: "100px",
-      height: "40px",
-      width: "40px",
-    };
-    const styleImage = {
-      marginTop: "10px",
-    };
+    // const stylePicture = {
+    //   borderRadius: "100px",
+    //   height: "40px",
+    //   width: "40px",
+    // };
+    // const styleImage = {
+    //   marginTop: "10px",
+    // };
 
     return (
       <div>
@@ -22,7 +22,7 @@ class ModalAKG extends Component {
             <Modal.Title style={{fontFamily:"Lora", marginLeft:"auto", color:"white", fontSize:"38px"}}>Takaran AKG</Modal.Title>
           </Modal.Header>
           <Modal.Body class="align-self-center mr-3" >
-            <img src={menu.food_picture} class="align-self-center mr-3"  style={{height:"200px", width: "200px", alignContent:"center"}}/>
+            <img alt="foodPicture" src={menu.food_picture} class="align-self-center mr-3"  style={{height:"200px", width: "200px", alignContent:"center"}}/>
           </Modal.Body>
           <ModalBody >
           <div>

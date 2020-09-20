@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../../src/utils/Navbar.css";
-
+import {HashLink} from 'react-router-hash-link';
 
 
 class Navbar extends Component {
@@ -43,8 +43,8 @@ class Navbar extends Component {
                     Produk
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#menuSehatRekomendasi" onClick={()=>window.open("/#menuSehatRekomendasi")}>Paket Sehat Ku</a>
-                    <a class="dropdown-item" href="#paketAcaraBesar" onClick={()=>window.open("/#paketAcaraBesar")}>Paket Sehat Kita</a>
+                    <HashLink class="dropdown-item" to="/#menuSehatRekomendasi">Paket Sehat Ku</HashLink>
+                    <HashLink class="dropdown-item" to="/#paketAcaraBesar">Paket Sehat Kita</HashLink>
                     <div class="dropdown-divider"></div>
                   </div>
                 </li>

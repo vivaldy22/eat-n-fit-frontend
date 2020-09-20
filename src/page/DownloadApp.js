@@ -10,7 +10,7 @@ class DownloadApp extends Component {
             <div className="download-wrapper">
               <div className="download-container">
                 <div className="download-image-container">
-                  <img className="download-image" src={phone}/>
+                  <img className="download-image" src={phone} alt="phone"/>
                 </div>
                 <div className="download-app-wrapper">
                   <div className="download-desc-container">
@@ -19,8 +19,8 @@ class DownloadApp extends Component {
                     </h1>
                   </div>
                   <div className="download-qr-container">
-                    <img className="download-playstore" src={imgGoogle} />
-                    <img className="download-qr" src={qrCode} />
+                    <img className="download-playstore" src={imgGoogle} alt="imgGoogle" />
+                    <img className="download-qr" src={qrCode} alt="qrCode" />
                   </div>
                 </div>
               </div>

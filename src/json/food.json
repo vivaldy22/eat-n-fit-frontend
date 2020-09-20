@@ -10,7 +10,7 @@
             "food_protein": "6",
             "food_price": "40.000",
             "food_desc": "Kreasi sehat dan lezat dari Eat & Fit dengan takaran gizi yang diukur oleh Nutritionist terbaik untuk konsumen yang fokus dalam pembentukan otot. Hidangan ini disajikan lengkap dengan Nasi Merah, Mun Tahu,  Cah Sawi & Wortel.",
-            "food_picture": "/img/home/gambar1.jpg"
+            "food_picture": "/squad2user/img/home/gambar1.jpg"
         },
         {
             "food_name": "(Diet Food) Bola Bola Daging Cincang",
@@ -21,7 +21,7 @@
             "food_protein": "26",
             "food_price": "50.000",
             "food_desc": "Menu Bola-Bola Daging Cincang, menggunakan daging pilihan yang minim akan lemak dan tinggi akan protein serta zat besi. Disajikan lengkap dengan Bubur Nasi Merah, Tumis Jamur Merang Cincang, dan Cah Sawi Putih Wortel Cincang",
-            "food_picture": "/img/home/bola_daging.jpg"
+            "food_picture": "/squad2user/img/home/bola_daging.jpg"
         }, 
         {
             "food_name": "(HeartAttack Food) Beef Bulgogi with Shirataki Noodle",
@@ -32,7 +32,7 @@
             "food_protein": "10",
             "food_price": "53.000",
             "food_desc": "Kreasi hidangan daging pilihan yang minim akan lemak dan tinggi akan protein serta zat besi. Disajikan dengan shirataki noodle japchae style, spinach namul & kimchi.",
-            "food_picture": "/img/home/beef.jpg"
+            "food_picture": "/squad2user/img/home/beef.jpg"
         },
         {
             "food_name": "(Pregnancy Food) Vegetable Spring Roll Pregnancy",
@@ -43,7 +43,7 @@
             "food_protein": "1.99",
             "food_price": "45.000",
             "food_desc": "Menu ayam goreng mentega yang rendah lemak dan kalori serta mengandung protein. Disajikan lengkap dengan Brown rice, ayam goreng mentega, vegetable spring roll, serta Greenbeans.",
-            "food_picture": "/img/home/pregnancy.jpg"
+            "food_picture": "/squad2user/img/home/pregnancy.jpg"
         },
         {
             "food_name": "(Vegetarian Food) Tongseng Jamur Tiram",
@@ -54,7 +54,7 @@
             "food_protein": "12",
             "food_price": "35.000",
             "food_desc": "Kelezatan tongseng jamur tiram dalam paket vegetarian yang disajikan lengkap dengan nasi merah bakar, wok fried greenpeas dan paprika, tumis putren, dan wortel. Sangat direkomendasikan bagi anda yang merupak seorang vegetarian",
-            "food_picture": "/img/home/vegetarian.jpg"
+            "food_picture": "/squad2user/img/home/vegetarian.jpg"
         }
     ]
 }

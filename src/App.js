@@ -1,11 +1,10 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./utils/Navbar"
 import Home from "./page/Home";
 import About from "./page/About"
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Footer from "./utils/footer";
+import { Route } from "react-router-dom";
+import Footer from "./utils/Footer";
 import OrderPage from "./page/OrderPage";
 import Download from "./page/Download";
 import DownloadApp from "./page/DownloadApp";

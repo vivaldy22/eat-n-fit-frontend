@@ -13,11 +13,12 @@
     "react-dom": "^16.13.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.1.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "PUBLIC_URL=/squad2user react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -35,8 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-
-  "proxy": "http://4c0c492e0018.ngrok.io"
+  }
 }
- 

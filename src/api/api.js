@@ -1,6 +1,6 @@
-import React, {Component} from "react";
-import Food from "../json/food.json";
-import Packet from "../json/packet.json";
+// import React, {Component} from "react";
+// import Food from "../json/food.json";
+// import Packet from "../json/packet.json";
 import axios from "axios";
 
 var BaseUrl = "";
