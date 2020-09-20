@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "../../src/utils/Navbar.css";
 
 
 
@@ -31,7 +32,7 @@ class Navbar extends Component {
                 </Link>
               </li>
               <li class="nav-item">
-                <Link className="nav-link active" to="/tentangKami" style={{color:"whitesmoke", fontFamily:"happy monkey", fontSize:"15px", fontWeight:"bold"}}>
+                <Link className="nav-link" to="/tentangKami" style={{color:"whitesmoke", fontFamily:"happy monkey", fontSize:"15px", fontWeight:"bold"}}>
                   Tentang Kami
                 </Link>
               </li>
@@ -44,8 +45,6 @@ class Navbar extends Component {
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#menuSehatRekomendasi" onClick={()=>window.open("/#menuSehatRekomendasi")}>Paket Sehat Ku</a>
                     <a class="dropdown-item" href="#paketAcaraBesar" onClick={()=>window.open("/#paketAcaraBesar")}>Paket Sehat Kita</a>
-                    <a class="dropdown-item" href="#paketSeafood" onClick={()=>window.open("/#paketSeafood")}>Paket Menu Seafood</a>
-                    <a class="dropdown-item" href="#paketDagingAyam" onClick={()=>window.open("/#paketDagingAyam")}>Paket Menu Daging Ayam</a>
                     <div class="dropdown-divider"></div>
                   </div>
                 </li>

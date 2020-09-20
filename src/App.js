@@ -7,7 +7,8 @@ import About from "./page/About"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from "./utils/footer";
 import OrderPage from "./page/OrderPage";
-import Download from "./page/Download"
+import Download from "./page/Download";
+import DownloadApp from "./page/DownloadApp";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route exact path="/tentangKami" component={About} />
       <Route exact path="/caraPesan" component={OrderPage} />
       <Route exact path="/unduh" component={Download} />
+      <Route exact path="/unduhAplikasi" component={DownloadApp} />
       <Footer />
     </div>
   );

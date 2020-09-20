@@ -24,7 +24,8 @@ class CardMenu extends Component {
         return (
     <div>
       <div class="featured-item" style={{height:"667px"}}>
-        <img class="card-img rounded-0" src={img1} onClick={this.handleShow} alt="" />
+        <img class="card-img rounded-0" src={menu.food_picture} onClick={this.handleShow} alt=""/>
+        {/* <img class="card-img rounded-0" src={`http://94da48e8dae8.ngrok.io/image/${menu.food_id}.jpg`} onClick={this.handleShow} alt=""/> */}
         {/* {console.log(menu.image)} */}
         <div class="item-body">
           <a href="#">

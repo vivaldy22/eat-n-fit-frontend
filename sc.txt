@@ -1,0 +1,114 @@
+  "foods_Seafood":[
+        {
+            "food_name": "Cumi Masak Hitam",
+            "food_portion": "1",
+            "food_calories": "200",
+            "food_fat": "12",
+            "food_carbs": "1233",
+            "food_protein": "23",
+            "food_price": "35.000",
+            "food_desc": "",
+            "food_picture": "../img/home/cumi-masak-hitam.jpg"
+        },
+        {
+            "food_name": "Tuna Lada Hitam",
+            "food_portion": "3",
+            "food_calories": "200",
+            "food_fat": "12",
+            "food_carbs": "1245",
+            "food_protein": "28",
+            "food_price": "35000",
+            "food_desc": "",
+            "food_picture": "../img/home/Tuna-Lada-Hitam2.jpg"
+        }, 
+        {
+            "food_name": "Tongkol Dabu-Dabu ",
+            "food_portion": "3",
+            "food_calories": "200",
+            "food_fat": "12",
+            "food_carbs": "1245",
+            "food_protein": "28",
+            "food_price": "35000",
+            "food_desc": "",
+            "food_picture": "../img/home/Tongkol-Dabu-Dabu.jpg"
+        },
+        {
+            "food_name": "Tuna Cabe Ijo",
+            "food_portion": "3",
+            "food_calories": "200",
+            "food_fat": "12",
+            "food_carbs": "1245",
+            "food_protein": "28",
+            "food_price": "35000",
+            "food_desc": "",
+            "food_picture": "../img/home/Tuna-Cabe-Ijo.jpg"
+        },
+        {
+            "food_name": "Tongkol Pindang Lodeh",
+            "food_portion": "3",
+            "food_calories": "200",
+            "food_fat": "12",
+            "food_carbs": "1245",
+            "food_protein": "28",
+            "food_price": "35000",
+            "food_desc": "",
+            "food_picture": "../img/home/Tongkol-Pindang-Lodeh.jpg"
+        }
+    ], 
+    "foods_Chicken":[
+        {
+            "food_name": "Steak Ayam BBQ",
+            "food_portion": "1",
+            "food_calories": "200",
+            "food_fat": "12",
+            "food_carbs": "1233",
+            "food_protein": "23",
+            "food_price": "35.000",
+            "food_desc": "",
+            "food_picture": "../img/home/Steik-Ayam-bbq.jpg"
+        },
+        {
+            "food_name": "Ayam Geprek",
+            "food_portion": "3",
+            "food_calories": "200",
+            "food_fat": "12",
+            "food_carbs": "1245",
+            "food_protein": "28",
+            "food_price": "35000",
+            "food_desc": "",
+            "food_picture": "../img/home/ayamGeprek.jpg"
+        }, 
+        {
+            "food_name": "Tongseng Ayam",
+            "food_portion": "3",
+            "food_calories": "200",
+            "food_fat": "12",
+            "food_carbs": "1245",
+            "food_protein": "28",
+            "food_price": "35000",
+            "food_desc": "",
+            "food_picture": "../img/home/Tongseng-Ayam.jpg"
+        },
+        {
+            "food_name": "Ayam Goreng Kuning",
+            "food_portion": "3",
+            "food_calories": "200",
+            "food_fat": "12",
+            "food_carbs": "1245",
+            "food_protein": "28",
+            "food_price": "35000",
+            "food_desc": "",
+            "food_picture": "../img/home/ayam-goreng-kuning.jpg"
+        },
+        {
+            "food_name": "Ayam Lada Hitam",
+            "food_portion": "3",
+            "food_calories": "200",
+            "food_fat": "12",
+            "food_carbs": "1245",
+            "food_protein": "28",
+            "food_price": "35000",
+            "food_desc": "",
+            "food_picture": "../img/home/ayam-lada-hitam.jpg"
+        }
+    ]

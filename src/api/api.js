@@ -4,6 +4,9 @@ import Packet from "../json/packet.json";
 import axios from "axios";
 
 var BaseUrl = "";
+
+// axios.defaults.headers.get['Authorization'] = sessionStorage.getItem('auth-token')
+
 export const getFood = async (token) => {
     const res = await axios.get(
       `${BaseUrl}/foods?page=1&limit=1000&keyword=`,
@@ -16,7 +19,7 @@ export const getFood = async (token) => {
 
   export const getToken = async() =>{
     const login = {
-      "user_email": "user@gmail.com",
+      "user_email": "testing1@gmail.com",
       "user_password": "password"
     }
     const res = await axios.post(

@@ -1,0 +1,154 @@
+/* ========================================================= */
+.download-wrapper {
+  margin-top: 29px;
+    height: 100vh;
+  }
+  
+  .download-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .download-app-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .download-desc-container {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .download-desc-container > h1 {
+    padding: 20px;
+    margin: 100px 30px 20px 10px;
+    color: #242424;
+    text-indent: 50px;
+    text-align: justify;
+    font-size: 24px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  .download-image-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+  }
+  
+  .download-image {
+    margin-left: 20px;
+    border-radius: 20px;
+    width: 250px;
+    height: 500px;
+  }
+  
+  .download-qr-container {
+    height: 100vh;
+    width: 100%;
+    display: block;
+    flex-direction: row;
+    object-fit: contain;
+  }
+  
+  .download-qr {
+    padding: 20px;
+    width: 240px;
+    height: 270px;
+  }
+  
+  .download-playstore {
+    margin-top: 230PX;
+    width: 320px;
+    height: 135px;
+  }
+  
+  @media screen and (max-width: 1080px) {
+    .download-wrapper {
+      height: 120vh;
+    }
+  
+    .download-container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .download-desc-container > h1 {
+      padding: 10px;
+      margin: 50px 20px 20px 20px;
+      font-size: 20px;
+    }
+  
+    .download-image {
+      margin-top: 400px;
+      border-radius: 20px;
+      width: 300px;
+      height: 300px;
+    }
+  
+    .download-qr-container {
+      height: 100vh;
+      width: 100%;
+      display: block;
+      flex-direction: row;
+      object-fit: contain;
+    }
+  
+    .download-qr {
+      margin-top: 300px;
+      margin-left: 50px;
+      padding: 20px;
+      width: 240px;
+      height: 270px;
+    }
+  
+    .download-playstore {
+      margin-top: -100px;
+      margin-left: 100px;
+      width: 260px;
+      height: 100px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .download-desc-container > h1 {
+      font-size: 18px;
+    }
+  
+    .download-image {
+      margin-top: 350px;
+      border-radius: 20px;
+      width: 250px;
+      height: 250px;
+    }
+  
+    .download-qr {
+      margin-top: -50px;
+      margin-left: 50px;
+      width: 180px;
+      height: 200px;
+    }
+  
+    .download-playstore {
+      margin-top: -50px;
+      margin-left: 50px;
+      width: 130px;
+      height: 50px;
+    }
+  }
+  

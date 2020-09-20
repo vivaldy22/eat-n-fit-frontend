@@ -3,426 +3,410 @@
     {
       "packet_name": "Paket Ulang Tahun",
       "packet_picture": "../img/home/ulangtahun.jpg",
-      "foods_composition": [
-        {
-          "food_composition": [
+      "food_composition": [
             {
               "food_name": "Nasi Putih",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "204",
+              "food_fat": "0.44",
+              "food_carbs": "44.08",
+              "food_protein": "4.2",
+              "food_price": "3000",
+              "food_desc": "Terdapat 204 kalori dalam 1 porsi (1 mangkuk) nasi yang disajikan dengan harga sebesar Rp.3000,00 untuk tiap porsinya "
             },
             {
               "food_name": "Chicken Cordon Bleu",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "304",
+              "food_fat": "10.68",
+              "food_carbs": "9",
+              "food_protein": "40",
+              "food_price": "15000",
+              "food_desc": "Terdapat 304 kalori dalam 1 porsi (1 piring) Chicken Cordon Bleu yang disajikan dengan harga sebesar Rp.5000,00 untuk tiap porsinya"
             },
             {
               "food_name": "Beef Teriyaki",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "210",
+              "food_fat": "9",
+              "food_carbs": "12",
+              "food_protein": "19",
+              "food_price": "35.000",
+              "food_desc": "Terdapat 210 kalori dalam 1 porsi (1 mangkuk) Beef Teriyaki yang disajikan dengan harga sebesar Rp.35.000,00 tiap porsinya"
             },
             {
-              "food_name": "Chicken Cordon Bleu",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_name": "Kakap Asam Manis",
+              "food_portion": "1",
+              "food_calories": "100",
+              "food_fat": "1.34",
+              "food_carbs": "0",
+              "food_protein": "20.51",
+              "food_price": "30.000",
+              "food_desc": "Terdapat 100 kalori dalam 1 porsi (1 piring) Kakap Asam Manis yang disajikan dengan harga sebesar Rp.30.000,00 tiap porsinya"
             },
             {
-              "food_name": "Chicken Cordon Bleu",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_name": "Puding",
+              "food_portion": "1",
+              "food_calories": "147",
+              "food_fat": "4.07",
+              "food_carbs": "24.86",
+              "food_protein": "2.6",
+              "food_price": "2000",
+              "food_desc": "Terdapat 147 kalori dalam 1 porsi (1 mangkuk) Puding yang disajikan dengan harga sebesar Rp.2.000,00 tiap porsinya"
             },
             {
-              "food_name": "Chicken Cordon Bleu",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_name": "Capcay",
+              "food_portion": "1",
+              "food_calories": "67",
+              "food_fat": "2.60",
+              "food_carbs": "9.67",
+              "food_protein": "1.58",
+              "food_price": "20.000",
+              "food_desc": "Terdapat 67 kalori dalam 1 porsi (1 mangkuk) capcay yang disajikan dengan harga sebesar Rp.20.000,00 tiap porsinya"
             },
             {
-              "food_name": "Chicken Cordon Bleu",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_name": "Semangka",
+              "food_portion": "2",
+              "food_calories": "60",
+              "food_fat": "0.3",
+              "food_carbs": "16",
+              "food_protein": "2",
+              "food_price": "35.000",
+              "food_desc": "Terdapat 60 kalori dalam 2 buah semangka yang disajikan dengan harga sebesar Rp.35.000,00/ 2 buah semangka"
             },
             {
-              "food_name": "Chicken Cordon Bleu",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_name": "Kerupuk",
+              "food_portion": "1",
+              "food_calories": "15",
+              "food_fat": "0.76",
+              "food_carbs": "1.83",
+              "food_protein": "0.22",
+              "food_price": "2000",
+              "food_desc": "Terdapat 15 kalori dalam 1 kerupuk bundar yang disajikan dengan harga sebesar Rp.2.000,00/ kerupuk"
             },
             {
-              "food_name": "Chicken Cordon Bleu",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_name": "Air Mineral",
+              "food_portion": "1",
+              "food_calories": "0",
+              "food_fat": "0",
+              "food_carbs": "0",
+              "food_protein": "0",
+              "food_price": "4000",
+              "food_desc": "1 botol air mineral (600 ml) tersedia dengan harga Rp.4000, 00/ botol"
             },
             {
-              "food_name": "Chicken Cordon Bleu",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_name": "Orange Juice",
+              "food_portion": "1",
+              "food_calories": "110",
+              "food_fat": "0",
+              "food_carbs": "27",
+              "food_protein": "0",
+              "food_price": "5000",
+              "food_desc": "Terdapat 110 kalori dalam 1 botol (250 ml) yang disajikan dengan harga sebesar Rp.5.000/botol"
             }
           ],
-          "total_calories": "",
-          "total_fat": "",
-          "total_carbs": "",
-          "total_protein": "",
-          "total_price": "",
-          "desc": ""
-        }
-      ]
+      "total_calories": "1217",
+      "total_fat": "29",
+      "total_carbs": "144.44",
+      "total_protein": "90.11",
+      "total_price": "583.000",
+      "desc": "Kami menyediakan 10 jenis hidangan dalam paket ulang tahun. Dengan jumlah porsi minimal pemesanan yakni 25 porsi. Anda dapat melihat total Takaran AKG yang terkandung dalam paket ini, takaran AKG tersebut dihitung dari setiap 1 porsi hidangan yang tertera dalam daftar. Harga yang tertera untuk 25 porsi"
     },
     {
       "packet_name": "Paket Acara Kantor",
       "packet_picture": "../img/home/office.jpg",
-      "foods_composition": [
-        {
-          "food_composition": [
+      "food_composition": [
             {
               "food_name": "Nasi Putih",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "204",
+              "food_fat": "0.44",
+              "food_carbs": "44.08",
+              "food_protein": "4.2",
+              "food_price": "3000",
+              "food_desc": "Terdapat 204 kalori dalam 1 porsi (1 mangkuk) nasi yang disajikan dengan harga sebesar Rp.3000,00 untuk 1 porsi nasi "
             },
             {
               "food_name": "Kakap Asam Manis",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "100",
+              "food_fat": "1.34",
+              "food_carbs": "0",
+              "food_protein": "20.51",
+              "food_price": "30.000",
+              "food_desc": "Terdapat 100 kalori dalam 1 porsi (1 piring) Kakap Asam Manis yang disajikan dengan harga sebesar Rp.30.000,00"
             },
             {
               "food_name": "Udang Goreng Tepung",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "287",
+              "food_fat": "14.64",
+              "food_carbs": "27.57",
+              "food_protein": "10.58",
+              "food_price": "25.000",
+              "food_desc": "Terdapat kalori sebesar 287 kkal dalam 1 porsi (1 piring) udang goreng tepung"
             },
             {
               "food_name": "Soup Ayam Sosis",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "75",
+              "food_fat": "2.46",
+              "food_carbs": "9.35",
+              "food_protein": "4.05",
+              "food_price": "20.000",
+              "food_desc": "Terdapat 75 kalori yang terkandung dalam 1 mangkuk soup ayam sosis"
             },
             {
               "food_name": "Asinan Jakarta",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "148",
+              "food_fat": "5.02",
+              "food_carbs": "22.97",
+              "food_protein": "4.97",
+              "food_price": "15.000",
+              "food_desc": "Terdapat 148 kalori dalam 1 porsi (1 piring) asinan Jakarta"
             },
             {
-              "food_name": "Buah Semangka",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_name": "Semangka",
+              "food_portion": "2",
+              "food_calories": "60",
+              "food_fat": "0.3",
+              "food_carbs": "16",
+              "food_protein": "2",
+              "food_price": "35.000",
+              "food_desc": "Terdapat 60 kalori dalam 2 buah semangka yang disajikan dengan harga sebesar Rp.35.000,00/ 2 buah"
             },
             {
               "food_name": "Puding",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "147",
+              "food_fat": "4.07",
+              "food_carbs": "24.86",
+              "food_protein": "2.6",
+              "food_price": "2000",
+              "food_desc": "Terdapat 147 kalori dalam 1 porsi (1 mangkuk) Puding yang disajikan dengan harga sebesar Rp.2.000,00/porsi"
             },
             {
               "food_name": "Kerupuk",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "15",
+              "food_fat": "0.76",
+              "food_carbs": "1.83",
+              "food_protein": "0.22",
+              "food_price": "2000",
+              "food_desc": "Terdapat 15 kalori dalam 1 kerupuk bundar yang disajikan dengan harga sebesar Rp.2.000,00/ kerupuk"
             },
             {
               "food_name": "Es Kelapa",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "113",
+              "food_fat": "2.05",
+              "food_carbs": "24.27",
+              "food_protein": "0.21",
+              "food_price": "4000",
+              "food_desc": "Terdapat 113 kalori dalam Es Kelapa (1 gelas) dengan harga sebesar Rp.4000,00 tiap porsinya "
             },
             {
               "food_name": "Air Mineral",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "0",
+              "food_fat": "0",
+              "food_carbs": "0",
+              "food_protein": "0",
+              "food_price": "4000",
+              "food_desc": "1 botol aqua (600 ml) tersedia dengan harga Rp.4000, 00/ botol"
             }
-          ],
-          "total_calories": "",
-          "total_fat": "",
-          "total_carbs": "",
-          "total_protein": "",
-          "total_price": "",
-          "desc": ""
-        }
-      ]
+      ],
+      "total_calories": "1149",
+      "total_fat": "31.08",
+      "total_carbs": "170.93",
+      "total_protein": "49.34",
+      "total_price": "3.500.000",
+      "desc": "Kami menyediakan 10 jenis hidangan dalam paket ulang tahun. Dengan jumlah porsi minimal pemesanan yakni 25 porsi. Anda dapat melihat total Takaran AKG yang terkandung dalam paket ini, takaran AKG tersebut dihitung dari setiap 1 porsi hidangan yang tertera dalam daftar. Harga yang tertera untuk 25 porsi"
     },
     {
       "packet_name": "Paket Aqiqah",
       "packet_picture": "../img/home/aqiqah.jpg",
-      "foods_composition": [
-        {
-          "food_composition": [
+      "food_composition": [
             {
               "food_name": "Nasi Putih",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "204",
+              "food_fat": "0.44",
+              "food_carbs": "44.08",
+              "food_protein": "4.2",
+              "food_price": "3000",
+              "food_desc": "Terdapat 204 kalori dalam 1 porsi (1 mangkuk) nasi yang disajikan dengan harga sebesar Rp.3000,00 untuk 1 porsi nasi "
             },
             {
               "food_name": "Kambing Guling",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "109",
+              "food_fat": "2.31",
+              "food_carbs": "0",
+              "food_protein": "20.6",
+              "food_price": "1600000",
+              "food_desc": "Takaran AKG untuk 1 porsi (1 piring daging kambing guling)"
             },
             {
               "food_name": "Sate Kambing",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "216",
+              "food_fat": "14.06",
+              "food_carbs": "4.81",
+              "food_protein": "18.93",
+              "food_price": "10000",
+              "food_desc": "Takaran AKG untuk 1 porsi (100 gr) daging sate kambing"
             },
             {
               "food_name": "Gulai Kambing",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "260",
+              "food_fat": "11.53",
+              "food_carbs": "7.52",
+              "food_protein": "32.87",
+              "food_price": "15000",
+              "food_desc": "Takaran AKG untuk 1 porsi (1 mangkuk gulai daging kambing)"
             },
             {
               "food_name": "Acar",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "12",
+              "food_fat": "0.12",
+              "food_carbs": "2.68",
+              "food_protein": "0.4",
+              "food_price": "3000",
+              "food_desc": "Takaran AKG untuk 1 porsi (1 mangkuk sedang acar)"
             },
             {
               "food_name": "Mie",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "219",
+              "food_fat": "3.3",
+              "food_carbs": "40.02",
+              "food_protein": "7.22",
+              "food_price": "6000",
+              "food_desc": "Takaran AKG untuk 1 porsi (1 mangkuk sedang) mie"
             },
             {
               "food_name": "Pisang",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "105",
+              "food_fat": "0.39",
+              "food_carbs": "26.95",
+              "food_protein": "1.29",
+              "food_price": "3000",
+              "food_desc": "Takaran AKG untuk 1 buah pisang ukuran sedang"
             },
             {
               "food_name": "Kerupuk",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "15",
+              "food_fat": "0.76",
+              "food_carbs": "1.83",
+              "food_protein": "0.22",
+              "food_price": "2000",
+              "food_desc": "Terdapat 15 kalori dalam 1 kerupuk bundar yang disajikan dengan harga sebesar Rp.2.000,00/ kerupuk"
             },
             {
               "food_name": "Air Mineral",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "0",
+              "food_fat": "0",
+              "food_carbs": "0",
+              "food_protein": "0",
+              "food_price": "4000",
+              "food_desc": "1 botol aqua (600 ml) tersedia dengan harga Rp.4000, 00/ botol"
             }
-          ],
-          "total_calories": "",
-          "total_fat": "",
-          "total_carbs": "",
-          "total_protein": "",
-          "total_price": "",
-          "desc": ""
-        }
-      ]
+       ],
+      "total_calories": "1140",
+      "total_fat": "32.91",
+      "total_carbs": "127.89",
+      "total_protein": "85.73",
+      "total_price": "3.440.000",
+      "desc": "Kami menyediakan 9 jenis hidangan dalam paket ulang tahun. Dengan jumlah porsi minimal pemesanan yakni 40 porsi. Anda dapat melihat total Takaran AKG yang terkandung dalam paket ini, takaran AKG tersebut dihitung dari setiap 1 porsi hidangan yang tertera dalam daftar. Harga yang tertera untuk 40 porsi"
     },
     {
       "packet_name": "Paket Pernikahan",
       "packet_picture": "../img/home/wedding.jpg",
-      "foods_composition": [
+      "food_composition": [
         {
-          "food_composition": [
-            {
-              "food_name": "Soup Ayam Jamur",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
-            },
+          "food_name": "Soup Ayam Jamur",
+          "food_portion": "1",
+          "food_calories": "85",
+          "food_fat": "3",
+          "food_carbs": "9.67",
+          "food_protein": "5",
+          "food_price": "18.000",
+          "food_desc": "Terdapat 85 kalori yang terkandung dalam 1 mangkuk soup ayam jamur"
+        },
             {
               "food_name": "Capcay",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "67",
+              "food_fat": "2.60",
+              "food_carbs": "9.67",
+              "food_protein": "1.58",
+              "food_price": "20.000",
+              "food_desc": "Terdapat 67 kalori dalam 1 porsi (1 mangkuk) capcay yang disajikan dengan harga sebesar Rp.20.000,00/porsi"
             },
             {
               "food_name": "Nasi Goreng Hongkong",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "333",
+              "food_fat": "12.34",
+              "food_carbs": "41.7",
+              "food_protein": "12.47",
+              "food_price": "15000",
+              "food_desc": "Terdapat 333 kalori dalam 1 porsi (1 mangkuk) nasi goreng hongkong"
             },
             {
               "food_name": "Kakap Asam Manis",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "100",
+              "food_fat": "1.34",
+              "food_carbs": "0",
+              "food_protein": "20.51",
+              "food_price": "30.000",
+              "food_desc": "Terdapat 100 kalori dalam 1 porsi (1 piring) Kakap Asam Manis yang disajikan dengan harga sebesar Rp.30.000,00"
             },
             {
               "food_name": "Nasi Putih",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "204",
+              "food_fat": "0.44",
+              "food_carbs": "44.08",
+              "food_protein": "4.2",
+              "food_price": "3000",
+              "food_desc": "Terdapat 204 kalori dalam 1 porsi (1 mangkuk) nasi yang disajikan dengan harga sebesar Rp.3000,00 untuk 1 porsi nasi "
             },
             {
               "food_name": "Soup Buah",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "247",
+              "food_fat": "0",
+              "food_carbs": "62.92",
+              "food_protein": "0.77",
+              "food_price": "5000",
+              "food_desc": "Terdapat 247 kalori dalam 1 porsi (1 mangkuk sedang) soup buah"
             },
             {
               "food_name": "Air Mineral",
-              "food_portion": "",
-              "food_calories": "",
-              "food_fat": "",
-              "food_carbs": "",
-              "food_protein": "",
-              "food_price": "",
-              "food_desc": ""
+              "food_portion": "1",
+              "food_calories": "0",
+              "food_fat": "0",
+              "food_carbs": "0",
+              "food_protein": "0",
+              "food_price": "4000",
+              "food_desc": "1 botol aqua (600 ml) tersedia dengan harga Rp.4000, 00/ botol"
             }
-          ],
-          "total_calories": "",
-          "total_fat": "",
-          "total_carbs": "",
-          "total_protein": "",
-          "total_price": "",
-          "desc": ""
-        }
-      ]
+      ],
+    "total_calories": "1036",
+    "total_fat": "19.72",
+    "total_carbs": "168.04",
+    "total_protein": "44.53",
+    "total_price": "4.750.000",
+    "desc": "Kami menyediakan 7 jenis hidangan dalam paket ulang tahun. Dengan jumlah porsi minimal pemesanan yakni 50 porsi. Anda dapat melihat total Takaran AKG yang terkandung dalam paket ini, takaran AKG tersebut dihitung dari setiap 1 porsi hidangan yang tertera dalam daftar. Harga yang tertera untuk 50 porsi"
     }
   ]
 }
